@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* stylelint-disable */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -316,10 +317,38 @@ template {
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
+  font-weight: 600;
+  font-family: "Alumni Sans";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src: url("../../fonts/AlumniSans-SemiBold.woff2") format("woff2"), url("../../fonts/AlumniSans-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Light.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../../fonts/Roboto-condensed-Medium.woff2") format("woff2"), url("../../fonts/Roboto-condensed-Medium.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 *,
 *::before,
@@ -340,8 +369,8 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
-  color: #000000;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #102654;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -554,14 +583,14 @@ button,
   display: inline-flex;
   padding: 10px 20px;
   color: #ffffff;
-  background-color: #2c39f2;
+  background-color: #103aae;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 .btn--red {
-  background-color: #ff1553;
+  background-color: #ff121f;
 }
 .btn:disabled {
   opacity: 0.5;
@@ -1204,6 +1233,91 @@ button,
 }
 .custom-select .input-message.is-valid {
   color: #15ab07;
+}
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 103px 0 103px;
+  background-color: #000;
+  color: #ffffff;
+}
+@media (max-width: 1199px) {
+  .main-header {
+    padding: 40px 45px 15px 45px;
+    background-color: #e00f0f;
+  }
+}
+@media (max-width: 767px) {
+  .main-header {
+    background-color: #0af04f;
+    padding: 15px;
+  }
+}
+
+.main-header__logo {
+  /*разобраться, почему не работает active и как его связать с mixin*/
+  /*разобраться, как его связать с mixin*/
+}
+@media (hover: hover) {
+  .main-header__logo:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+}
+.main-header__logo:active {
+  opacity: 0.2;
+}
+.main-header__logo:focus-visible {
+  outline: 2px solid #103aae;
+}
+
+.main-header__phone {
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.78px;
+  color: inherit;
+  /*разобраться, как его связать с mixin*/
+  /*разобраться, как его связать с mixin*/
+}
+@media (max-width: 1199px) {
+  .main-header__phone {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.48px;
+  }
+}
+@media (max-width: 767px) {
+  .main-header__phone {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+  }
+}
+@media (hover: hover) {
+  .main-header__phone:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+}
+.main-header__phone:active {
+  color: #103aae;
+}
+.main-header__phone:focus-visible {
+  outline: 2px solid #103aae;
 }
 
 /* @mixin hover-focus {
