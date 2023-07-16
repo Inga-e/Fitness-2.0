@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Описание проекта">
   <title>Fitness 2.0</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -29,94 +29,102 @@
     <h1 class="visually-hidden">
       Интернет-магазин Фитнес 2.0
     </h1>
-    <section class="">
-      <h2>
-        Фитнес центр
-      </h2>
-      <p>
-        Омск
-      </p>
-      <ul>
-        <li>
-          Тренажерный зал
-        </li>
-        <li>
-          Групповые занятия
-        </li>
-        <li>
-          Кардио-зона
-        </li>
-      </ul>
-      <a class="" href="">
-        Купить абонемент
-      </a>
-      <div class="">
+    <section class="hero-block">
+      <div class="hero-block__text-container">
+        <h2>
+          Фитнес центр
+        </h2>
+        <p>
+          Омск
+        </p>
+        <a class="hero-block__btn btn" href="#subscription">
+          Купить абонемент
+        </a>
+        <ul>
+          <li>
+            Тренажерный зал
+          </li>
+          <li>
+            Групповые занятия
+          </li>
+          <li>
+            Кардио-зона
+          </li>
+        </ul>
+      </div>
+      <div class="hero-block__image-wrapper">
         <img src="../../img/hero-block-man-desktop.jpg" width="500" height="556"
-          alt="Спортивный мужчина стоит вполоборота и смотрит влево">
+          alt="Спортивный мужчина стоит вполоборота вправо и смотрит влево">
       </div>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="">
-      <a class="logo" href="#">
-        <img class="logo-image" src="../../img/svg/logo.svg" alt="логотип Supergym" width="122" height="44">
+    <div class="main-footer__container">
+      <a class="main-footer__logo logo" href="#">
+        <span>
+          <picture>
+            <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="18">
+            <source media="(max-width: 767px)" srcset="../../img/svg/logo-mobile.svg" width="69" height="24">
+            <img src="../../img/svg/logo-footer-desktop.svg" width="88" height="32" alt="логотип Supergym">
+          </picture>
+        </span>
       </a>
-      <nav class="">
-        <ul class="">
-          <li class="">
-            <a class="" href="">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">
               Услуги
             </a>
           </li>
-          <li class="">
-            <a class="" href="">
+          <li class="nav__item">
+            <a class="nav__link" href="#">
               Абонементы
             </a>
           </li>
-          <li class="">
-            <a class="" href="">
+          <li class="nav__item">
+            <a class="nav__link" href="#">
               Акции
             </a>
           </li>
-          <li class="">
-            <a class="" href="">
+          <li class="nav__item">
+            <a class="nav__link" href="#">
               Тренеры
             </a>
           </li>
-          <li class="">
-            <a class="" href="">
+          <li class="nav__item">
+            <a class="nav__link" href="#">
               Расписание
             </a>
           </li>
         </ul>
       </nav>
-      <ul class="">
-        <li class="">
-          <a class="" href="https://vk.com/htmlacademy">
+      <ul class="socials">
+        <li class="socials__item">
+          <a class="socials__link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">
               ВКонтакте
             </span>
-            <svg class="" width="22" height="22">
+            <svg class="socials__icon" width="13.89" height="13.89">
               <use xlink:href="../../img/sprite.svg#vkontakte"></use>
             </svg>
           </a>
         </li>
-        <li class="">
-          <a class="" href="#">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
             <span class="visually-hidden">
               Одноклассники
             </span>
-            <svg class="" width="22" height="22">
+            <svg class="socials__icon" width="13.89" height="13.89">
               <use xlink:href="../../img/sprite.svg#ok"></use>
             </svg>
           </a>
         </li>
-        <li class="">
-          <a class="" href="#">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
             <span class="visually-hidden">
               Reddit
             </span>
-            <svg class="" width="22" height="22">
+            <svg class="socials__icon" width="13.89" height="13.89">
               <use xlink:href="../../img/sprite.svg#reddit"></use>
             </svg>
           </a>

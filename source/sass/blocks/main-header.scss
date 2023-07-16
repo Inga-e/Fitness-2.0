@@ -5,35 +5,15 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: 30px 103px 0 103px;
-  background-color: #000;
+  padding: 30px 103px;
   color: $color-default-white;
 
   @include vp-1199 {
     padding: 40px 45px 15px 45px;
-    background-color: #e00f0f;
   }
 
   @include vp-767 {
-    background-color: #0af04f;
     padding: 15px;
-  }
-}
-
-.main-header__logo {
-
-  @include hover {
-    opacity: 0.8;
-  }
-
-  /*разобраться, почему не работает active и как его связать с mixin*/
-  &:active {
-    opacity: 0.2;
-  }
-
-  /*разобраться, как его связать с mixin*/
-  &:focus-visible {
-    outline: 2px solid $color-egyptian-blue;
   }
 }
 

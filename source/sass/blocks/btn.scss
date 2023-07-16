@@ -1,26 +1,32 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
   color: $color-default-white;
+  justify-content: center;
 
-  background-color: $color-egyptian-blue;
-  border: none;
+  background-color: transparent;
   cursor: pointer;
 
   transition: opacity $trans-default;
-
+/*
   &--red {
     background-color: $color-torch-red;
   }
-
+*/
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
   }
 
-  @include hover-focus {
+  /*@include hover {
     opacity: 0.8;
-  }
+  }*/
 }
