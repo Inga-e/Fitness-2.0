@@ -1715,6 +1715,102 @@ button,
   background-color: #103aae;
 }
 
+.gym {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 120px 103px 235px 163px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gym__text-container {
+  min-width: 355px;
+  margin-right: 85px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.gym__text-container h2 {
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: inherit;
+  letter-spacing: 1.44px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+.gym__text-container b {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 55px;
+}
+.gym__text-container p {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.gym__image-video-container {
+  position: relative;
+}
+
+.gym__image-wrapper {
+  width: 660px;
+  height: 401px;
+}
+.gym__image-wrapper img {
+  background-color: #f8f9fc;
+}
+
+.gym__video-wrapper {
+  position: absolute;
+  top: 288px;
+  left: -63px;
+}
+
+.video iframe {
+  display: none;
+  border: 0;
+}
+.video button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 72px;
+  height: 72px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
+  background-image: linear-gradient(to right, #ed0233, #003eb7);
+  border-radius: 50%;
+  border: none;
+  /* border-image: linear-gradient(to right, rgba(237, 2, 51, 0.2), rgba(0, 62, 183, 0.2));*/
+}
+.video button svg {
+  color: #ffffff;
+}
+
+.video__image-wrapper {
+  position: relative;
+}
+.video__image-wrapper::before {
+  position: absolute;
+  content: "";
+  width: 364px;
+  height: 228px;
+  background-color: rgba(20, 54, 122, 0.5);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
