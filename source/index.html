@@ -15,8 +15,8 @@
     <a class="main-header__logo logo" href="#">
       <span>
         <picture>
-          <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="17">
           <source media="(max-width: 767px)" srcset="../../img/svg/logo-mobile.svg" width="69" height="24">
+          <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="17">
           <img src="../../img/svg/logo-desktop.svg" width="122" height="44" alt="логотип Supergym">
         </picture>
       </span>
@@ -37,7 +37,7 @@
         <p>
           Омск
         </p>
-        <a class="hero-block__btn btn" href="#subscription">
+        <a class="hero-block__btn btn" href="#pass">
           Купить абонемент
         </a>
         <ul>
@@ -53,8 +53,17 @@
         </ul>
       </div>
       <div class="hero-block__image-wrapper">
-        <img src="../../img/hero-block-man-desktop.jpg" width="500" height="556"
-          alt="Спортивный мужчина стоит вполоборота вправо и смотрит влево">
+        <picture>
+          <source type="image/webp" media="(max-width: 1199px)"
+            srcset="../../img/hero-block-man-tablet.webp 1x, ../../img/hero-block-man-tablet@2x.webp 2x">
+          <source type="image/webp"
+            srcset="../../img/hero-block-man-desktop.webp 1x, ../../img/hero-block-man-desktop@2x.webp 2x">
+          <source media="(max-width: 1199px)"
+            srcset="../../img/hero-block-man-tablet.jpg 1x, ../../img/hero-block-man-tablet@2x.jpg 2x">
+          <img src="../../img/hero-block-man-desktop.jpg" width="500" height="556"
+            srcset="../../img/hero-block-man-desktop@2x.jpg 2x" loading="lazy"
+            alt="Спортивный мужчина стоит вполоборота вправо и смотрит влево">
+        </picture>
       </div>
     </section>
     <section class="gym">
@@ -77,26 +86,138 @@
       </div>
       <div class="gym__image-video-container">
         <div class="gym__image-wrapper">
-          <img src="../../img/fitness-room-desktop.png" width="660" height="401" alt="Тренажерный зал">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="../../img/fitness-room-mobile.webp 1x, ../../img/fitness-room-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1199px)"
+              srcset="../../img/fitness-room-tablet.webp 1x, ../../img/fitness-room-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="../../img/fitness-room-desktop.webp 1x, ../../img/fitness-room-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)"
+              srcset="../../img/fitness-room-mobile.png 1x, ../../img/fitness-room-mobile@2x.png 2x">
+            <source media="(max-width: 1199px)"
+              srcset="../../img/fitness-room-tablet.png 1x, ../../img/fitness-room-tablet@2x.png 2x">
+            <img src="../../img/fitness-room-desktop.png" width="660" height="401"
+              srcset="../../img/fitness-room-desktop@2x.png 2x" loading="lazy" alt="Тренажерный зал">
+          </picture>
         </div>
         <div class="gym__video-wrapper video">
           <div class="video__image-wrapper">
-            <img src="../../img/background/fitness-room-background-desktop.png" width="364" height="228"
-              alt="Тренажерный зал">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="../../img/background/fitness-room-background-mobile.webp 1x, ../../img/background/fitness-room-background-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)"
+                srcset="../../img/background/fitness-room-background-tablet.webp 1x, ../../img/background/fitness-room-background-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="../../img/background/fitness-room-background-desktop.webp 1x, ../../img/background/fitness-room-background-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)"
+                srcset="../../img/background/fitness-room-background-mobile.png 1x, ../../img/background/fitness-room-background-mobile@2x.png 2x">
+              <source media="(max-width: 1199px)"
+                srcset="../../img/background/fitness-room-background-tablet.png 1x, ../../img/background/fitness-room-background-tablet@2x.png 2x">
+              <img src="../../img/background/fitness-room-background-desktop.png" width="364" height="228"
+                srcset="../../img/background/fitness-room-background-desktop@2x.png 2x" loading="lazy"
+                alt="Тренажерный зал">
+            </picture>
           </div>
           <iframe width="364" height="228" src="https://disk.yandex.ru/i/PW8eSAmRBFw46w" allowfullscreen>
           </iframe>
           <button type="button">
             <span class="visually-hidden">Пуск</span>
-            <svg width="17" height="17">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle opacity="0.2" cx="50" cy="50" r="49" stroke="url(#paint0_linear_82_466)" stroke-width="2" />
+              <circle cx="50" cy="50" r="36" fill="url(#paint1_linear_82_466)" />
+              <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white" />
+              <defs>
+                <linearGradient id="paint0_linear_82_466" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ED0233" />
+                  <stop offset="1" stop-color="#003EB7" />
+                </linearGradient>
+                <linearGradient id="paint1_linear_82_466" x1="28.2373" y1="14" x2="90.1653" y2="21.664"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ED0233" />
+                  <stop offset="1" stop-color="#003EB7" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <svg width="20" height="20">
               <use xlink:href="../../img/sprite.svg#play"></use>
             </svg>
           </button>
         </div>
       </div>
     </section>
+    <section class="pass" id="pass">
+      <h2>
+        Абонементы
+      </h2>
+      <ol>
+        <li>
+          1 месяц
+        </li>
+        <li>
+          6 месяцев
+        </li>
+        <li>
+          12 месяцев
+        </li>
+      </ol>
+      <ul>
+        <li>
+          <h3>
+            С тренером
+          </h3>
+          <small>
+            12 занятий
+          </small>
+          <b>
+            5000
+          </b>
+          <svg width="30" height="42">
+            <use xlink:href="../../img/sprite.svg#rubble"></use>
+          </svg>
+          <a href="#">
+            Купить абонемент
+          </a>
+        </li>
+        <li>
+          <h3>
+            Дневной
+          </h3>
+          <small>
+            с 8:00 до 17:00
+          </small>
+          <b>
+            1700
+          </b>
+          <svg width="30" height="42">
+            <use xlink:href="../../img/sprite.svg#rubble"></use>
+          </svg>
+          <a href=" #">
+            Купить абонемент
+          </a>
+        </li>
+        <li>
+          <h3>
+            Полный день
+          </h3>
+          <small>
+            с 8:00 до 22:00
+          </small>
+          <b>
+            2700
+          </b>
+          <svg width="30" height="42">
+            <use xlink:href="../../img/sprite.svg#rubble"></use>
+          </svg>
+          <a href=" #">
+            Купить абонемент
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
-  <footer class="main-footer">
+  <footer class=" main-footer">
     <div class="main-footer__container">
       <a class="main-footer__logo logo" href="#">
         <span>

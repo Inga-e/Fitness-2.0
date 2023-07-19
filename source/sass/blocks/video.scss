@@ -7,23 +7,65 @@
 
   button {
     position: absolute;
+    width: 100px;
+    height: 100px;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 72px;
-    height: 72px;
-    background-image: $red-to-blue;
+    background-color: transparent;
     border-radius: 50%;
     border: none;
-   /* border-image: linear-gradient(to right, rgba(237, 2, 51, 0.2), rgba(0, 62, 183, 0.2));*/
+    cursor: pointer;
+
     svg {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    }
+
+    svg:last-of-type {
+      display: none;
       color: $color-default-white;
+    }
+
+    &:hover {
+      border: 2px solid $color-sapphire-blue;
+    }
+
+    &:hover::before {
+      position: absolute;
+      content: "";
+      background-color: $color-default-white;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &:hover svg:last-of-type {
+      position: absolute;
+      top: 50%;
+      left: 53%;
+      display: block;
+      width: 23px;
+      height: 23px;
+      color: $color-sapphire-blue;
+    }
+
+    &:hover svg:first-of-type {
+      display: none;
     }
   }
 }
 
 .video__image-wrapper {
   position: relative;
+  object-fit: cover;
 
   &::before {
     position: absolute;
@@ -31,5 +73,31 @@
     width: 364px;
     height: 228px;
     background-color: rgba(20, 54, 122, 0.50);
+  }
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+
+    &::before {
+      width: 266px;
+      height: 167px;
+    }
+  }
+
+  @include vp-767 {
+    width: 320px;
+
+    &::before {
+      width: 320px;
+    }
+  }
+
+  img {
+    @include vp-767 {
+      object-fit: cover;
+      width: 320px;
+      height: 167px;
+    }
   }
 }
