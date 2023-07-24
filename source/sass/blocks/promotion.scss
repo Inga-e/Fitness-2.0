@@ -152,14 +152,6 @@
     text-transform: uppercase;
     width: max-content;
 
-    @include vp-1199 {
-
-    }
-
-    @include vp-767 {
-
-    }
-
     &:hover {
       opacity: 0.8;
     }
@@ -223,16 +215,8 @@
     line-height: 16px;
     letter-spacing: 0.7px;
 
-    @include vp-767 {
-
-    }
-
     span {
       border-bottom: 1px solid $color-default-white;
-
-      @include vp-767 {
-
-      }
     }
   }
 
@@ -244,10 +228,6 @@
 }
 
 .promotion__main-suggestion-text-container {
-
-  @include vp-1199 {
-
-  }
 
   @include vp-767 {
     display: flex;
@@ -261,13 +241,8 @@
     padding: 0;
     font-size: 28px;
     font-weight: $font-weight-bold;
-    /*line-height: 45px;*/
     margin-bottom: 29px;
     padding-left: 10px;
-
-    @include vp-767 {
-
-    }
   }
 
   b {
@@ -279,10 +254,6 @@
     padding: 0;
     margin-bottom: 35px;
     padding-left: 10px;
-
-    @include vp-767 {
-
-    }
   }
 
   p {
