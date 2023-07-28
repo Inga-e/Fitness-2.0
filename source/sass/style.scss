@@ -4,7 +4,7 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
-
+@import "vendor/data-tabs";
 // Global
 // ---------------------------------
 
@@ -24,18 +24,19 @@
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
 @import "blocks/main-header";
-@import "blocks/main-footer";
-@import "blocks/nav";
-@import "blocks/socials";
 @import "blocks/logo";
+@import "blocks/nav";
 @import "blocks/hero-block";
 @import "blocks/gym";
 @import "blocks/video";
+@import "blocks/passes-tabs";
 @import "blocks/super-games";
 @import "blocks/coaches";
 @import "blocks/promotion";
 @import "blocks/advantages";
 @import "blocks/feedback";
+@import "blocks/main-footer";
+@import "blocks/socials";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
