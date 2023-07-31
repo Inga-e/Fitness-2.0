@@ -1,0 +1,123 @@
+.faq {
+  padding: 120px 0 120px 0;
+  background-color: $color-ghost-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    margin-left: 103px;
+    margin-bottom: 39px;
+    font-family: $font-family-primery;
+    font-weight: $font-weight-semibold;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 1.62px;
+    min-width: 1160px;
+  }
+}
+
+.faq__content-wrapper {
+  margin: 0 103px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 40px;
+
+  ol {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style-type: none;
+
+    li {
+      margin: 0;
+      border: 1px solid rgba(16, 38, 84, 0.20);
+      margin-bottom: 10px;
+      font-weight: $font-weight-medium;
+      font-size: 18px;
+      line-height: 18px;
+      text-align: center;
+      padding: 18px;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $color-sapphire-blue;
+      }
+
+      @include focus {
+        border-color: $color-sapphire-blue;
+      }
+
+      @include active {
+        background-image: $red-to-blue;
+        color: $color-default-white;
+      }
+
+      &--disabled {
+        border-color: rgba(16, 38, 84, 0.20);
+        color: #c8c9cc;
+      }
+    }
+  }
+}
+
+.faq__description-wrapper {
+
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid rgba(28, 51, 116, 0.20);
+    }
+  }
+}
+
+/*
+.accordion {
+  //max-width: 500px;
+  margin: 0 auto 50px auto;
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    margin-bottom: 34px;
+    padding: 10px;
+  }
+
+  &__element.is-active > &__button {
+    opacity: 0.5;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 10px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    padding: 10px;
+  }
+}
+*/

@@ -2389,15 +2389,13 @@ button,
 @media (hover: hover) {
   .passes__content-wrapper ul li a:hover:not(.focus-visible) {
     color: #ffffff;
-    background: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
-    background: linear-gradient(to right, #ed0233, #003eb7);
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
     outline: none;
   }
 }
 .passes__content-wrapper ul li a.focus-visible:focus {
   color: #ffffff;
-  background: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
-  background: linear-gradient(to right, #ed0233, #003eb7);
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   outline: none;
 }
 .passes__content-wrapper ul li a.focus-visible:active {
@@ -2405,14 +2403,12 @@ button,
 }
 .passes__content-wrapper ul li:hover a {
   color: #ffffff;
-  background: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
-  background: linear-gradient(to right, #ed0233, #003eb7);
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   outline: none;
 }
 .passes__content-wrapper ul li:focus a {
   color: #ffffff;
-  background: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
-  background: linear-gradient(to right, #ed0233, #003eb7);
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   outline: none;
 }
 .passes__content-wrapper ul li:not(:nth-child(3n)) {
@@ -4241,6 +4237,7 @@ blockquote p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  list-style-type: none;
 }
 .faq__content-wrapper ol li {
   margin: 0;
@@ -4253,7 +4250,69 @@ blockquote p {
   padding: 18px;
   cursor: pointer;
 }
+.faq__content-wrapper ol li:hover {
+  border-color: #102654;
+}
+.faq__content-wrapper ol li.focus-visible:focus {
+  border-color: #102654;
+}
+.faq__content-wrapper ol li.focus-visible:active {
+  background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  color: #ffffff;
+}
+.faq__content-wrapper ol li--disabled {
+  border-color: rgba(16, 38, 84, 0.2);
+  color: #c8c9cc;
+}
 
+.faq__description-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.faq__description-wrapper ul li {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(28, 51, 116, 0.2);
+}
+
+/*
+.accordion {
+  //max-width: 500px;
+  margin: 0 auto 50px auto;
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    margin-bottom: 34px;
+    padding: 10px;
+  }
+
+  &__element.is-active > &__button {
+    opacity: 0.5;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 10px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    padding: 10px;
+  }
+}
+*/
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
