@@ -51,7 +51,7 @@
       border-width: 2px;
     }
 
-    @include hover-focus {
+    @include hover {
       background-color: $color-default-white;
       color: $color-sapphire-blue;
     }

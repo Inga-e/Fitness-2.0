@@ -1,0 +1,179 @@
+.free-class {
+  display: flex;
+  background-color: $color-sapphire-blue;
+  color: $color-default-white;
+  width: 100%;
+}
+
+.free-class__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 56px 103px 70px 103px;
+  min-width: 477px;
+  margin-left: auto;
+
+  @include vp-1199 {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 70px 0;
+    min-width: 472px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+  }
+
+  h2 {
+    font-family: $font-family-primery;
+    font-weight: $font-weight-bold;
+    font-size: 54px;
+    line-height: 156%;
+    letter-spacing: 1.62px;
+    text-shadow: -1px 0 0 $color-default-white;
+    width: 100%;
+    min-width: 400px;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      letter-spacing: 1.26px;
+      margin-bottom: 40px;
+    }
+
+    @include vp-767 {
+      font-weight: $font-weight-semibold;
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: 0.96px;
+      text-shadow: none;
+      min-width: 290px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    min-width: 410px;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1199 {
+      min-width: 472px;
+    }
+
+    @include vp-767 {
+      min-width: 290px;
+    }
+
+    fieldset {
+      display: flex;
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+        width: 410px;
+
+        @include vp-1199 {
+          column-gap: 60px;
+          width: 472px;
+        }
+
+        @include vp-767 {
+          display: flex;
+          flex-direction: column;
+          width: 290px;
+          margin-bottom: 0;
+        }
+
+        li {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+          @include vp-767 {
+            margin-bottom: 40px;
+          }
+        }
+
+        input {
+          border: none;
+          background-color: transparent;
+          color: $color-default-white;
+          font-family: $font-family-secondary;
+          font-weight: $font-weight-regular;
+          font-size: 14px;
+          line-height: 16px;
+          padding-bottom: 10px;
+
+          &::placeholder {
+            font-family: $font-family-secondary;
+            font-weight: $font-weight-regular;
+            font-size: 14px;
+            line-height: 16px;
+            color: $color-default-white;
+          }
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      margin: 0;
+      padding: 21px;
+      background-color: transparent;
+      font-weight: $font-weight-bold;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.7px;
+      color: $color-default-white;
+      text-transform: uppercase;
+      border: 3px solid $color-default-white;
+
+      @include hover {
+        background-color: $color-default-white;
+        color: $color-sapphire-blue;
+
+        @include vp-1199 {
+          display: none;
+        }
+      }
+
+      @include hover-focus {
+
+        @include vp-1199 {
+          background-color: $color-default-white;
+          color: $color-sapphire-blue;
+        }
+      }
+
+      @include focus {
+        background-color: $color-default-white;
+        color: $color-sapphire-blue;
+
+        @include vp-1199 {
+          display: none;
+        }
+      }
+
+      @include active {
+        background-image: $red-to-blue;
+        color: $color-default-white;
+      }
+    }
+  }
+}

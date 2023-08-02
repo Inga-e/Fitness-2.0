@@ -193,11 +193,6 @@
     flex-direction: column;
   }
 
-/*
-  &:not(:first-of-type) {
-    display: none;
-  }*/
-
   ul {
     display: flex;
     margin: 0;
@@ -235,7 +230,7 @@
         margin-bottom: 35px;
       }
 
-     &:hover {
+      @include hover {
         border-width: 7px;
         border-image: linear-gradient(160deg, #D10A42, #00359F);
         border-style: solid;
@@ -359,10 +354,10 @@
         outline: none;
       }*/
 
-      @include hover {
-        color: $color-default-white;
-        background: $red-to-blue;
-        outline: none;
+        @include hover {
+          color: $color-default-white;
+          background: $red-to-blue;
+          outline: none;
         }
 
         @include focus {
@@ -371,9 +366,9 @@
           outline: none;
         }
 
-       @include active {
+        @include active {
           color: rgba(255, 255, 255, 0.7);
-       }
+        }
      }
 
       &:hover a {
