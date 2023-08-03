@@ -54,6 +54,27 @@
     @include hover {
       background-color: $color-default-white;
       color: $color-sapphire-blue;
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+
+    @include focus {
+      background-color: $color-default-white;
+      color: $color-sapphire-blue;
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+
+    @include hover-focus {
+
+      @include vp-1199 {
+       background-color: $color-default-white;
+       color: $color-sapphire-blue;
+      }
     }
   }
 }

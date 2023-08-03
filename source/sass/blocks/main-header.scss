@@ -41,14 +41,28 @@
 
   @include hover {
     opacity: 0.8;
-  }
-/*разобраться, как его связать с mixin*/
-  &:active {
-    color: $color-egyptian-blue;
+
+    @include vp-1199 {
+      opacity: 1;
+    }
   }
 
-/*разобраться, как его связать с mixin*/
-  &:focus-visible {
-    outline: 2px solid $color-egyptian-blue;
+  @include focus {
+    outline: 2px solid $color-default-white;
+
+    @include vp-1199 {
+      outline: none;
+    }
+  }
+
+  @include hover-focus {
+
+    @include vp-1199 {
+      outline: 2px solid $color-default-white;
+    }
+  }
+
+  @include active {
+    opacity: 0.4;
   }
 }

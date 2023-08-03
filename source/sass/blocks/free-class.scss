@@ -103,7 +103,8 @@
           padding: 0;
           margin: 0;
           width: 100%;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          /*border: 1px solid transparent;*/
+          /*border-bottom-color: rgba(255, 255, 255, 0.5);*/
 
           @include vp-767 {
             margin-bottom: 40px;
@@ -118,7 +119,11 @@
           font-weight: $font-weight-regular;
           font-size: 14px;
           line-height: 16px;
+          padding-top: 10px;
           padding-bottom: 10px;
+          width: 100%;
+          border: 1px solid transparent;
+          border-bottom-color: rgba(255, 255, 255, 0.5);
 
           &::placeholder {
             font-family: $font-family-secondary;
@@ -126,6 +131,31 @@
             font-size: 14px;
             line-height: 16px;
             color: $color-default-white;
+          }
+
+          @include hover {
+            border-bottom-color: $color-default-white;
+          }
+
+          @include focus {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding-left: 10px;
+
+            &::placeholder {
+              color: $color-sapphire-blue;
+            }
+          }
+
+          &:disabled {
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+
+            &::placeholder {
+              opacity: 0.4;
+            }
+          }
+
+          .error {
+            border-bottom-color: $color-torch-red;
           }
         }
       }
@@ -153,20 +183,20 @@
         }
       }
 
-      @include hover-focus {
-
-        @include vp-1199 {
-          background-color: $color-default-white;
-          color: $color-sapphire-blue;
-        }
-      }
-
       @include focus {
         background-color: $color-default-white;
         color: $color-sapphire-blue;
 
         @include vp-1199 {
           display: none;
+        }
+      }
+
+      @include hover-focus {
+
+        @include vp-1199 {
+          background-color: $color-default-white;
+          color: $color-sapphire-blue;
         }
       }
 

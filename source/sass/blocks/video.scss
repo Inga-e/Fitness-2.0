@@ -18,12 +18,12 @@
     cursor: pointer;
 
     svg {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
     }
 
     svg:last-of-type {
@@ -31,34 +31,166 @@
       color: $color-default-white;
     }
 
-    &:hover {
+    @include hover {
       border: 2px solid $color-sapphire-blue;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $color-default-white;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      svg:last-of-type {
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        display: block;
+        width: 23px;
+        height: 23px;
+        color: $color-sapphire-blue;
+      }
+
+      svg:first-of-type {
+        display: none;
+      }
+
+      @include vp-1199 {
+        display: none;
+      }
     }
 
-    &:hover::before {
-      position: absolute;
-      content: "";
-      background-color: $color-default-white;
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+    @include focus {
+      border: 2px solid $color-sapphire-blue;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $color-default-white;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      svg:last-of-type {
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        display: block;
+        width: 23px;
+        height: 23px;
+        color: $color-sapphire-blue;
+      }
+
+      svg:first-of-type {
+        display: none;
+      }
+
+      @include vp-1199 {
+        display: none;
+      }
     }
 
-    &:hover svg:last-of-type {
-      position: absolute;
-      top: 50%;
-      left: 53%;
-      display: block;
-      width: 23px;
-      height: 23px;
-      color: $color-sapphire-blue;
+    @include hover-focus {
+
+      @include vp-1199 {
+        border: 2px solid $color-sapphire-blue;
+
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: $color-default-white;
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        svg:last-of-type {
+          position: absolute;
+          top: 50%;
+          left: 53%;
+          display: block;
+          width: 23px;
+          height: 23px;
+          color: $color-sapphire-blue;
+        }
+
+        svg:first-of-type {
+          display: none;
+        }
+      }
     }
 
-    &:hover svg:first-of-type {
-      display: none;
+    @include active {
+      border: 2px solid $color-sapphire-blue;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $color-default-white;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      svg:last-of-type {
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        display: block;
+        width: 23px;
+        height: 23px;
+        color: $color-sapphire-blue;
+      }
+
+      svg:first-of-type {
+        display: none;
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+      border: 2px solid rgba(16, 38, 84, 0.4);
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: rgba(255, 255, 255, 0.4);
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      svg:last-of-type {
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        display: block;
+        width: 23px;
+        height: 23px;
+        color: rgba(16, 38, 84, 0.4);
+      }
+
+      svg:first-of-type {
+        display: none;
+      }
     }
   }
 }

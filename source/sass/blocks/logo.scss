@@ -1,15 +1,29 @@
 .logo {
 
-  &:hover {
+  @include hover {
     opacity: 0.8;
+
+    @include vp-1199 {
+      opacity: 1;
+    }
   }
 
-  &:active {
-    opacity: 0.2;
+  @include focus {
+    outline: 2px solid $color-default-white;
+
+    @include vp-1199 {
+      outline: none;
+    }
   }
 
-  &:focus-visible {
-    outline: 2px solid $color-egyptian-blue;
-    outline-offset: 5px;
+  @include hover-focus {
+
+    @include vp-1199 {
+      outline: 2px solid $color-default-white;
+    }
+  }
+
+  @include active {
+    opacity: 0.4;
   }
 }

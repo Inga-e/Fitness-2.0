@@ -114,14 +114,6 @@
         padding: 14px;
       }
 
-      @include hover-focus {
-        display: none;
-
-        @include vp-1199 {
-          border-color: $color-sapphire-blue;
-        }
-      }
-
       @include hover {
         border-color: $color-sapphire-blue;
 
@@ -138,12 +130,19 @@
         }
       }
 
+      @include hover-focus {
+
+        @include vp-1199 {
+          border-color: $color-sapphire-blue;
+        }
+      }
+
       @include active {
         background-image: $red-to-blue;
         color: $color-default-white;
       }
 
-      &--disabled {
+      .disabled {
         border-color: rgba(16, 38, 84, 0.20);
         color: $color-link-water-grey;
       }
@@ -164,10 +163,6 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-    }
-
-    @include vp-767 {
-
     }
 
     li {
@@ -249,18 +244,6 @@
           }
         }
 
-        @include hover-focus {
-
-          @include vp-1199 {
-            background-color: $color-sapphire-blue;
-
-            &::before,
-            &::after {
-              background-color: $color-default-white;
-            }
-          }
-        }
-
         @include hover {
           background-color: $color-sapphire-blue;
 
@@ -284,6 +267,18 @@
 
           @include vp-1199 {
             display: none;
+          }
+        }
+
+        @include hover-focus {
+
+          @include vp-1199 {
+            background-color: $color-sapphire-blue;
+
+            &::before,
+            &::after {
+              background-color: $color-default-white;
+            }
           }
         }
 
@@ -335,41 +330,3 @@
     }
   }
 }
-
-/*
-.accordion {
-  //max-width: 500px;
-  margin: 0 auto 50px auto;
-
-  & & {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  &__element:last-child {
-    margin-bottom: 0;
-  }
-
-  &__element {
-    margin-bottom: 34px;
-    padding: 10px;
-  }
-
-  &__element.is-active > &__button {
-    opacity: 0.5;
-  }
-
-  &__button {
-    width: 100%;
-    padding: 10px;
-
-    text-transform: uppercase;
-
-    cursor: pointer;
-  }
-
-  &__wrapper {
-    padding: 10px;
-  }
-}
-*/

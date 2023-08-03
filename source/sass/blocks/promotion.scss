@@ -35,6 +35,29 @@
       margin-bottom: 42px;
     }
   }
+
+  a {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    width: max-content;
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @include active {
+      opacity: 1;
+    }
+
+    /* деактивация копки */
+    .disabled {
+      opacity: 0.3;
+    }
+  }
 }
 
 .promotion__container {
@@ -73,7 +96,7 @@
     li {
       padding: 28px 28px 18px 18px;
       border-width: 7px;
-      border-image: linear-gradient(160deg, #D10A42, #00359F);
+      border-image: $crimson-to-smalt;
       border-style: solid;
       border-image-slice: 1;
       display: flex;
@@ -123,10 +146,26 @@
           border-bottom: 1px solid $color-sapphire-blue;
         }
 
-        &:focus-visible {
+        @include focus {
           padding: 9px;
           outline: none;
           border: 1px solid $color-sapphire-blue;
+
+          span {
+            border-bottom: none;
+          }
+        }
+
+        @include active {
+          color: $color-sapphire-blue;
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: 0.6px;
+          border-color: transparent;
+
+          span {
+            border-bottom: 1px solid $color-sapphire-blue;
+          }
         }
       }
     }
@@ -141,34 +180,6 @@
       flex-direction: column;
       align-items: center;
     }
-  }
-
-  a {
-    display: inline-block;
-    margin: 0;
-    padding: 10px;
-    font-family: $font-family-secondary;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-    width: max-content;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 1;
-    }
-
-    /* деактивация копки */
-    &--disabled {
-      opacity: 0.3;
-    }
-  }
-
-  a:focus-visible span {
-    border-bottom: none;
-    outline: none;
   }
 }
 
@@ -218,12 +229,28 @@
     span {
       border-bottom: 1px solid $color-default-white;
     }
-  }
 
-  a:focus-visible {
-    padding: 9px;
-    outline: none;
-    border: 1px solid $color-default-white;
+    @include focus {
+      padding: 9px;
+      outline: none;
+      border: 1px solid $color-default-white;
+
+      span {
+        border-bottom: none;
+      }
+    }
+
+    @include active {
+      color: $color-default-white;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.7px;
+      border-color: transparent;
+
+      span {
+        border-bottom: 1px solid $color-default-white;
+      }
+    }
   }
 }
 
@@ -285,7 +312,7 @@
   }
 
   img {
-    background-color: #afd3fb;
+    background-color: $color-pale-cornflower-blue;
     object-fit: cover;
 
     @include vp-1199 {
