@@ -250,7 +250,6 @@
         }
 
         @include hover-focus {
-          display: none;
 
           @include vp-1199 {
             background-color: $color-sapphire-blue;
