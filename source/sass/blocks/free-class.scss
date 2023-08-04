@@ -153,10 +153,26 @@
               opacity: 0.4;
             }
           }
+        }
 
-          .error {
+        div.is-invalid {
+          border-bottom-color: $color-torch-red;
+          color: $color-torch-red;
+          font-family: $font-family-secondary;
+          font-weight: $font-weight-regular;
+          font-size: 14px;
+          line-height: 25px;
+
+         input {
             border-bottom-color: $color-torch-red;
           }
+        }
+
+        div.is-valid {
+          font-family: $font-family-secondary;
+          font-weight: $font-weight-regular;
+          font-size: 14px;
+          line-height: 25px;
         }
       }
     }
@@ -172,7 +188,9 @@
       letter-spacing: 0.7px;
       color: $color-default-white;
       text-transform: uppercase;
-      border: 3px solid $color-default-white;
+      border: none;
+      outline: 3px solid $color-default-white;
+      outline-offset: -3px;
 
       @include hover {
         background-color: $color-default-white;
@@ -203,6 +221,7 @@
       @include active {
         background-image: $red-to-blue;
         color: $color-default-white;
+        outline: none;
       }
     }
   }

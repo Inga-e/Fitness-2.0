@@ -7,6 +7,11 @@
   color: $color-default-white;
   margin: 0;
   padding: 0;
+
+  @include vp-767 {
+    margin-top: 20px;
+    margin-left: 5px;
+  }
 }
 
 .socials__item {
@@ -30,38 +35,53 @@
   background-color: $color-default-white;
   border-radius: 50%;
 
-  &--disabled {
+  .disabled {
     opacity: 0.3;
     cursor: default;
   }
 
-  &:hover {
+  @include hover {
     background-color: $color-egyptian-blue;
+
+    .socials__icon {
+      color: $color-default-white;
+    }
+
+    @include vp-1199 {
+      display: none;
+    }
   }
 
-  &:active {
-    background-color: $color-sapphire-blue;
-  }
-
-  &:focus-visible {
+  @include focus {
     background-color: $color-egyptian-blue;
-    outline: none;
     border: none;
+
+    .socials__icon {
+      color: $color-default-white;
+    }
+
+    @include vp-1199 {
+      display: none;
+    }
   }
 
-  &--disabled {
-    opacity: 0.3;
+  @include hover-focus {
+
+    @include vp-1199 {
+      background-color: $color-egyptian-blue;
+      border: none;
+
+      .socials__icon {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  @include active {
+    background-color: $color-sapphire-blue;
   }
 }
 
 .socials__icon {
   text-align: center;
-}
-
-.socials__link:hover .socials__icon {
-  color: $color-default-white;
-}
-
-.socials__link:focus-within .socials__icon {
-  color: $color-default-white;
 }

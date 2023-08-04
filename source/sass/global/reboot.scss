@@ -31,7 +31,6 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  /*background-color: $color-default-white;*/
 
   &::before {
     position: absolute;
@@ -40,21 +39,21 @@ body {
     height: 658px;
     top: 0;
     left: 0;
-    background: conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.23633825778961deg, #B80027 290.3060026168823deg, hsl(212, 100%, 26%));
+    background: $conic-blue-to-red;
     z-index: -1;
   }
 
   @include vp-1199 {
     &::before {
       height: 554px;
-      background: conic-gradient(from 155deg at 20.70% 35.74%, #003D85 32.23633825778961deg, #B80027 290.3060026168823deg, hsl(212, 100%, 26%));
+      background: $conic-blue-to-red;
     }
   }
 
   @include vp-767 {
     &::before {
       height: 491px;
-      background: conic-gradient(from 167deg at 35.31% 34.22%, #003D85 32.23633825778961deg, #B80027 290.3060026168823deg, hsl(212, 100%, 26%));
+      background: $conic-blue-to-red;
     }
   }
 }

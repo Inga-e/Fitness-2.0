@@ -1236,28 +1236,39 @@
           <h2>
             Бесплатное занятие
           </h2>
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset>
-              <legend class="visually-hidden">
-                Контактные данные заявителя
-              </legend>
-              <ul>
-                <li>
-                  <label>
-                    <input class="focus-visible" type="text" placeholder="Имя" name="name" id="name" required>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input class="focus-visible" type="tel" placeholder="Телефон" name="phone" id="phone" required>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="focus-visible" type="submit">
-              Отправить
-            </button>
-          </form>
+          <div data-form-validate="data-form-validate" data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset>
+                <legend class="visually-hidden">
+                  Контактные данные заявителя
+                </legend>
+                <ul>
+                  <li>
+                    <label for="name"></label>
+                    <div data-validate-type="text" data-limitation="name"
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <input class="focus-visible" type="text" placeholder="Имя" name="name" id="name" required>
+                    </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label for="phone">
+                    </label>
+                    <div data-validate-type="phone" data-on-input-validate
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля"
+                      data-message-success="Поле заполнено верно" data-required>
+                      <input class="focus-visible" type="tel" placeholder="Телефон" name="phone" id="phone" required>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="focus-visible" type="submit">
+                Отправить
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -1304,47 +1315,49 @@
   </main>
   <footer class=" main-footer">
     <div class="main-footer__container">
-      <a class="main-footer__logo logo" href="#">
-        <span>
-          <picture>
-            <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="18">
-            <source media="(max-width: 767px)" srcset="../../img/svg/logo-mobile.svg" width="69" height="24">
-            <img src="../../img/svg/logo-footer-desktop.svg" width="88" height="32" alt="логотип Supergym">
-          </picture>
-        </span>
-      </a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Услуги
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Абонементы
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Акции
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Тренеры
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Расписание
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div class="main-footer__logo-nav-wrapper">
+        <a class="main-footer__logo logo focus-visible" href="#">
+          <span>
+            <picture>
+              <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="18">
+              <source media="(max-width: 767px)" srcset="../../img/svg/logo-mobile.svg" width="69" height="24">
+              <img src="../../img/svg/logo-footer-desktop.svg" width="88" height="32" alt="логотип Supergym">
+            </picture>
+          </span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link focus-visible" href="#">
+                Услуги
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link focus-visible" href="#">
+                Абонементы
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link focus-visible" href="#">
+                Акции
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link focus-visible" href="#">
+                Тренеры
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link focus-visible" href="#">
+                Расписание
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <ul class="socials">
         <li class="socials__item">
-          <a class="socials__link" href="https://vk.com/htmlacademy">
+          <a class="socials__link focus-visible" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">
               ВКонтакте
             </span>
@@ -1354,7 +1367,7 @@
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#">
+          <a class="socials__link focus-visible" href="#">
             <span class="visually-hidden">
               Одноклассники
             </span>
@@ -1364,7 +1377,7 @@
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#">
+          <a class="socials__link focus-visible" href="#">
             <span class="visually-hidden">
               Reddit
             </span>
