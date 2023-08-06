@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/init-tabs';
 import {initAccordions} from './modules/init-accordion';
+import {swiperFeedback} from './modules/feedback-swiper';
 
 // ---------------------------------
 
@@ -25,6 +26,22 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initTabs();
     initAccordions();
+    swiperFeedback;
+  });
+
+  const swiper = new Swiper('.coaches__swiper', {
+    // Optional parameters
+    /* direction: 'vertical',*/
+    loop: true,
+
+    /*loopedSlides: 4,*/
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    slidesPerView: 4,
   });
 });
 
