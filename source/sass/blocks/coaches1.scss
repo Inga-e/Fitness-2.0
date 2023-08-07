@@ -11,7 +11,7 @@
   }
 
   h2 {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     margin-bottom: 48px;
     font-family: $font-family-primery;
@@ -19,6 +19,7 @@
     font-size: 54px;
     line-height: 65px;
     letter-spacing: 1.62px;
+    width: 1160px;
 
     @include vp-1199 {
       font-size: 42px;
@@ -35,8 +36,233 @@
       margin-bottom: 42px;
     }
   }
+}
 
-  .swiper__coaches {
-    width: 1366px;
+.coaches1__swiper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/*.coaches__swiper-wrapper {
+  display: flex;
+  width: 1160px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 0;
+}*/
+
+.coaches1__trainers-slide {
+  position: relative;
+  width: 260px;
+  height: 294px;
+  margin: 0;
+  padding: 0;
+  min-width: 260px;
+
+    @include vp-1199 {
+      width: 268px;
+    }
+
+    @include vp-767 {
+      width: 226px;
+      height: 274px;
+    }
+
+    @include hover {
+      .coaches1__text {
+        background-color: rgba(16, 38, 84, 0.89);
+      }
+
+      h3 {
+        top: 31px;
+      }
+
+      .coaches1__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 155px;
+      }
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+
+    @include focus {
+      .coaches1__text {
+        background-color: rgba(16, 38, 84, 0.89);
+      }
+
+      h3 {
+        top: 31px;
+
+        @include vp-767 {
+          top: 21px;
+        }
+      }
+
+      .coaches1__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 155px;
+        width: 100%;
+      }
+    }
+
+    @include active {
+
+      @include vp-1199 {
+        .coaches1__text {
+          background-color: rgba(16, 38, 84, 0.89);
+        }
+
+        h3 {
+          top: 31px;
+
+          @include vp-767 {
+            top: 21px;
+          }
+        }
+
+        .coaches1__description {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 155px;
+        }
+      }
+    }
+  }
+
+/*
+.coaches__trainers-item:first-child {
+
+@include vp-1199 {
+  margin-right: 30px;
+}
+
+@include vp-767 {
+  margin-right: 0;
+}
+}*/
+
+.coaches1__image-container {
+  width: 260px;
+  height: 294px;
+
+  @include vp-1199 {
+    width: 268px;
+    height: 294px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+
+  img {
+    background-color: $color-ghost-white;
+    object-fit: cover;
+
+    @include vp-1199 {
+      width: 268px;
+      height: 294px;
+    }
+
+    @include vp-767 {
+      width: 226px;
+      height: 274px;
+    }
   }
 }
+
+.coaches1__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    padding: 58px 46px 58px 55px;
+
+  @include vp-767 {
+    padding: 48px 33px 48px 34px;
+  }
+
+  h3 {
+    position: absolute;
+    color: $color-default-white;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: $font-weight-bold;
+    line-height: 27px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 54px;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.coaches1__description {
+  display: none;
+  position: absolute;
+  top: 81px;
+
+  @include vp-767 {
+    top: 71px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: $color-spindle-grey;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: auto;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    color: $color-default-white;
+    list-style-type: none;
+
+    li {
+      font-size: 14px;
+      line-height: 21px;
+      margin: 0;
+      padding: 0;
+      width: 159px;
+      padding-left: 16px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: $color-default-white;
+        border-radius: 50%;
+        top: 7px;
+        left: 0;
+      }
+    }
+
+      li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }

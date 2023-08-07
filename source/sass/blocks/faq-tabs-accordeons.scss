@@ -58,12 +58,12 @@
 }
 
 .faq__content-wrapper {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: grid;
   grid-template-columns: 260px 1fr;
   column-gap: 40px;
-  max-width: 1160px;
+  width: 1160px;
 
   @include vp-1199 {
     display: flex;
@@ -244,6 +244,19 @@
           }
         }
 
+        &.is-open {
+          background-color: $color-sapphire-blue;
+
+          &::before {
+            background-color: $color-default-white;
+          }
+
+          &::after {
+            width: 0;
+            height: 0;
+          }
+        }
+
         @include hover {
           background-color: $color-sapphire-blue;
 
@@ -279,15 +292,6 @@
             &::after {
               background-color: $color-default-white;
             }
-          }
-        }
-
-        @include active {
-          background-color: $color-sapphire-blue;
-
-          &::after {
-            width: 0;
-            height: 0;
           }
         }
 
