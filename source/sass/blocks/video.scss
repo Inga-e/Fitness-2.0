@@ -3,6 +3,19 @@
   iframe {
     display: none;
     border: 0;
+
+    &.is-shown {
+      display: block;
+      z-index: 2;
+    }
+  }
+}
+
+.video__image-button-container {
+  position: relative;
+
+    &.is-hidden {
+    display: none;
   }
 
   button {

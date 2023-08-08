@@ -2790,7 +2790,18 @@ button,
   display: none;
   border: 0;
 }
-.video button {
+.video iframe.is-shown {
+  display: block;
+  z-index: 2;
+}
+
+.video__image-button-container {
+  position: relative;
+}
+.video__image-button-container.is-hidden {
+  display: none;
+}
+.video__image-button-container button {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -2804,7 +2815,7 @@ button,
   border: none;
   cursor: pointer;
 }
-.video button svg {
+.video__image-button-container button svg {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -2814,15 +2825,15 @@ button,
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-.video button svg:last-of-type {
+.video__image-button-container button svg:last-of-type {
   display: none;
   color: #ffffff;
 }
 @media (hover: hover) {
-  .video button:hover:not(.focus-visible) {
+  .video__image-button-container button:hover:not(.focus-visible) {
     border: 2px solid #102654;
   }
-  .video button:hover:not(.focus-visible)::before {
+  .video__image-button-container button:hover:not(.focus-visible)::before {
     position: absolute;
     content: "";
     background-color: #ffffff;
@@ -2835,7 +2846,7 @@ button,
         -ms-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
   }
-  .video button:hover:not(.focus-visible) svg:last-of-type {
+  .video__image-button-container button:hover:not(.focus-visible) svg:last-of-type {
     position: absolute;
     top: 50%;
     left: 53%;
@@ -2844,19 +2855,19 @@ button,
     height: 23px;
     color: #102654;
   }
-  .video button:hover:not(.focus-visible) svg:first-of-type {
+  .video__image-button-container button:hover:not(.focus-visible) svg:first-of-type {
     display: none;
   }
 }
 @media (hover: hover) and (max-width: 1199px) {
-  .video button:hover:not(.focus-visible) {
+  .video__image-button-container button:hover:not(.focus-visible) {
     display: none;
   }
 }
-.video button.focus-visible:focus {
+.video__image-button-container button.focus-visible:focus {
   border: 2px solid #102654;
 }
-.video button.focus-visible:focus::before {
+.video__image-button-container button.focus-visible:focus::before {
   position: absolute;
   content: "";
   background-color: #ffffff;
@@ -2869,7 +2880,7 @@ button,
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-.video button.focus-visible:focus svg:last-of-type {
+.video__image-button-container button.focus-visible:focus svg:last-of-type {
   position: absolute;
   top: 50%;
   left: 53%;
@@ -2878,19 +2889,19 @@ button,
   height: 23px;
   color: #102654;
 }
-.video button.focus-visible:focus svg:first-of-type {
+.video__image-button-container button.focus-visible:focus svg:first-of-type {
   display: none;
 }
 @media (max-width: 1199px) {
-  .video button.focus-visible:focus {
+  .video__image-button-container button.focus-visible:focus {
     display: none;
   }
 }
 @media (hover: hover) and (max-width: 1199px) {
-  .video button:hover:not(.focus-visible) {
+  .video__image-button-container button:hover:not(.focus-visible) {
     border: 2px solid #102654;
   }
-  .video button:hover:not(.focus-visible)::before {
+  .video__image-button-container button:hover:not(.focus-visible)::before {
     position: absolute;
     content: "";
     background-color: #ffffff;
@@ -2903,7 +2914,7 @@ button,
         -ms-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
   }
-  .video button:hover:not(.focus-visible) svg:last-of-type {
+  .video__image-button-container button:hover:not(.focus-visible) svg:last-of-type {
     position: absolute;
     top: 50%;
     left: 53%;
@@ -2912,15 +2923,15 @@ button,
     height: 23px;
     color: #102654;
   }
-  .video button:hover:not(.focus-visible) svg:first-of-type {
+  .video__image-button-container button:hover:not(.focus-visible) svg:first-of-type {
     display: none;
   }
 }
 @media (max-width: 1199px) {
-  .video button.focus-visible:focus {
+  .video__image-button-container button.focus-visible:focus {
     border: 2px solid #102654;
   }
-  .video button.focus-visible:focus::before {
+  .video__image-button-container button.focus-visible:focus::before {
     position: absolute;
     content: "";
     background-color: #ffffff;
@@ -2933,7 +2944,7 @@ button,
         -ms-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
   }
-  .video button.focus-visible:focus svg:last-of-type {
+  .video__image-button-container button.focus-visible:focus svg:last-of-type {
     position: absolute;
     top: 50%;
     left: 53%;
@@ -2942,14 +2953,14 @@ button,
     height: 23px;
     color: #102654;
   }
-  .video button.focus-visible:focus svg:first-of-type {
+  .video__image-button-container button.focus-visible:focus svg:first-of-type {
     display: none;
   }
 }
-.video button.focus-visible:active {
+.video__image-button-container button.focus-visible:active {
   border: 2px solid #102654;
 }
-.video button.focus-visible:active::before {
+.video__image-button-container button.focus-visible:active::before {
   position: absolute;
   content: "";
   background-color: #ffffff;
@@ -2962,7 +2973,7 @@ button,
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-.video button.focus-visible:active svg:last-of-type {
+.video__image-button-container button.focus-visible:active svg:last-of-type {
   position: absolute;
   top: 50%;
   left: 53%;
@@ -2971,14 +2982,14 @@ button,
   height: 23px;
   color: #102654;
 }
-.video button.focus-visible:active svg:first-of-type {
+.video__image-button-container button.focus-visible:active svg:first-of-type {
   display: none;
 }
-.video button:disabled {
+.video__image-button-container button:disabled {
   cursor: default;
   border: 2px solid rgba(16, 38, 84, 0.4);
 }
-.video button:disabled::before {
+.video__image-button-container button:disabled::before {
   position: absolute;
   content: "";
   background-color: rgba(255, 255, 255, 0.4);
@@ -2991,7 +3002,7 @@ button,
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
-.video button:disabled svg:last-of-type {
+.video__image-button-container button:disabled svg:last-of-type {
   position: absolute;
   top: 50%;
   left: 53%;
@@ -3000,7 +3011,7 @@ button,
   height: 23px;
   color: rgba(16, 38, 84, 0.4);
 }
-.video button:disabled svg:first-of-type {
+.video__image-button-container button:disabled svg:first-of-type {
   display: none;
 }
 
@@ -6117,7 +6128,7 @@ blockquote p {
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
-  width: 1160px;
+  width: 100%;
 }
 @media (max-width: 1199px) {
   .faq__content-wrapper {
@@ -6128,7 +6139,6 @@ blockquote p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
   }
 }
 .faq__content-wrapper ol {
