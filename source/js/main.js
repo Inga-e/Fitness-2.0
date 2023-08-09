@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/init-tabs';
 import {initAccordions} from './modules/init-accordion';
 import {swiperFeedback} from './modules/feedback-swiper';
+import {swiperCoaches} from './modules/coaches-swiper';
 import {isChangeAccordionButtons} from './modules/faq-buttons';
 import {openVideo} from './modules/video';
 
@@ -29,24 +30,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initAccordions();
     swiperFeedback;
+    swiperCoaches;
     isChangeAccordionButtons();
     openVideo();
-  });
-
-  const swiper = new Swiper('.coaches1__swiper', {
-    // Optional parameters
-    /* direction: 'vertical',*/
-    loop: true,
-
-    /*loopedSlides: 4,*/
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    slidesPerView: 4,
-
   });
 });
 

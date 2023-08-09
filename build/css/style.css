@@ -4487,14 +4487,18 @@ button,
 .coaches1 {
   position: relative;
   padding: 10px 103px 105px 103px;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 @media (max-width: 1199px) {
   .coaches1 {
+    max-width: 768px;
     padding: 10px 101px 100px 101px;
   }
 }
 @media (max-width: 767px) {
   .coaches1 {
+    max-width: 320px;
     padding: 10px 47px 70px 47px;
   }
 }
@@ -4516,6 +4520,7 @@ button,
     letter-spacing: 1.26px;
     margin-bottom: 31px;
     text-align: center;
+    width: 566px;
   }
 }
 @media (max-width: 767px) {
@@ -4524,29 +4529,39 @@ button,
     line-height: 38px;
     letter-spacing: 0.96px;
     margin-bottom: 42px;
+    width: 226px;
   }
 }
 
 .coaches1__swiper {
-  width: 1160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
+  max-width: 1161px;
+}
+@media (max-width: 1199px) {
+  .coaches1__swiper {
+    max-width: 567px;
+  }
+}
+@media (max-width: 767px) {
+  .coaches1__swiper {
+    width: 226px;
+  }
 }
 
-/*.coaches__swiper-wrapper {
-  display: flex;
-  width: 1160px;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 0;
-  min-width: 0;
-}*/
+.swiper-button-prev,
+.swiper-button-next {
+  color: transparent;
+}
+
 .coaches1__trainers-slide {
   position: relative;
   width: 260px;
   height: 294px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  min-width: 260px;
 }
 @media (max-width: 1199px) {
   .coaches1__trainers-slide {
@@ -4562,6 +4577,7 @@ button,
 @media (hover: hover) {
   .coaches1__trainers-slide:hover:not(.focus-visible) .coaches1__text {
     background-color: rgba(16, 38, 84, 0.89);
+    position: absolute;
   }
   .coaches1__trainers-slide:hover:not(.focus-visible) h3 {
     top: 31px;
@@ -4577,7 +4593,6 @@ button,
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 100%;
     height: 155px;
   }
 }
@@ -4609,7 +4624,6 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 155px;
-  width: 100%;
 }
 @media (max-width: 1199px) {
   .coaches1__trainers-slide.focus-visible:active .coaches1__text {
@@ -4640,17 +4654,6 @@ button,
   }
 }
 
-/*
-.coaches__trainers-item:first-child {
-
-@include vp-1199 {
-  margin-right: 30px;
-}
-
-@include vp-767 {
-  margin-right: 0;
-}
-}*/
 .coaches1__image-container {
   width: 260px;
   height: 294px;
@@ -4689,9 +4692,19 @@ button,
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 260px;
   height: 100%;
   padding: 58px 46px 58px 55px;
+}
+@media (max-width: 1199px) {
+  .coaches1__text {
+    width: 268px;
+  }
+}
+@media (max-width: 767px) {
+  .coaches1__text {
+    width: 226px;
+  }
 }
 @media (max-width: 767px) {
   .coaches1__text {
@@ -4775,6 +4788,95 @@ button,
 }
 .coaches1__description ul li:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.coaches__button {
+  position: absolute;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #102654;
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .coaches__button {
+    width: 35px;
+    height: 35px;
+  }
+}
+.coaches__button--back {
+  left: 20px;
+}
+@media (max-width: 767px) {
+  .coaches__button--back {
+    left: -5px;
+  }
+}
+.coaches__button--forward {
+  right: 20px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 5%;
+}
+@media (max-width: 767px) {
+  .coaches__button--forward {
+    right: -3px;
+  }
+}
+@media (hover: hover) {
+  .coaches__button:hover:not(.focus-visible) {
+    border: 1px solid #102654;
+  }
+}
+@media (hover: hover) and (max-width: 1199px) {
+  .coaches__button:hover:not(.focus-visible) {
+    display: none;
+  }
+}
+.coaches__button.focus-visible:focus {
+  border: 1px solid #102654;
+}
+@media (max-width: 1199px) {
+  .coaches__button.focus-visible:focus {
+    display: none;
+  }
+}
+@media (hover: hover) and (max-width: 1199px) {
+  .coaches__button:hover:not(.focus-visible) {
+    border: 1px solid #102654;
+  }
+}
+@media (max-width: 1199px) {
+  .coaches__button.focus-visible:focus {
+    border: 1px solid #102654;
+  }
+}
+.coaches__button.focus-visible:active {
+  background-color: #102654;
+  color: #ffffff;
+}
+.coaches__button:disabled {
+  color: rgba(16, 38, 84, 0.3);
+  cursor: default;
+}
+@media (max-width: 767px) {
+  .coaches__button svg {
+    width: 10px;
+    height: 19px;
+  }
 }
 
 .promotion {
@@ -5819,11 +5921,6 @@ blockquote p {
 }
 .feedback1 .swiper-slide {
   width: 436px;
-}
-@media (max-width: 1199px) {
-  .feedback1 .swiper-slide {
-    width: 436px;
-  }
 }
 @media (max-width: 767px) {
   .feedback1 .swiper-slide {
