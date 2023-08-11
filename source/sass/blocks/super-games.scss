@@ -1,8 +1,9 @@
 .super-games {
   display: flex;
-  width: 100%;
+  width: 1160px;
   justify-content: center;
-  padding: 120px 103px;
+  margin: 0 auto;
+  padding: 121px 0 95px;
 
   @include vp-1199 {
     padding: 100px 45px;
@@ -10,8 +11,28 @@
 
   @include vp-767 {
     flex-direction: column;
+    width: 290px;
     padding: 70px 15px;
     align-items: center;
+  }
+}
+
+.super-games__text-container {
+  background-color: $color-torch-blackred;
+  color: $color-default-white;
+  margin: 0;
+  padding: 75px 78px 85px 78px;
+  width: 344px;
+  flex-grow: 1;
+
+  @include vp-1199 {
+    width: 292px;
+    padding: 51px 45px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 50px 44px;
   }
 
   p {
@@ -19,7 +40,7 @@
     margin: 0;
     font-size: 18px;
     line-height: 27px;
-    margin-bottom: 30px;
+    margin-bottom: 44px;
 
     @include vp-1199 {
       font-size: 12px;
@@ -39,8 +60,8 @@
     justify-content: center;
     text-align: center;
     border: 4px solid $color-default-white;
-    padding-top: 29px;
-    padding-bottom: 29px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     @include vp-1199 {
       font-size: 10px;
@@ -79,31 +100,13 @@
   }
 }
 
-.super-games__text-container {
-  background-color: $color-torch-blackred;
-  color: $color-default-white;
-  padding: 85px 78px 83px 78px;
-  width: 500px;
-  flex-grow: 1;
-
-  @include vp-1199 {
-    width: 292px;
-    padding: 51px 45px;
-  }
-
-  @include vp-767 {
-    flex-direction: column;
-    padding: 50px 44px;
-  }
-}
-
 .super-games__title-date-time-wrapper {
   display: grid;
   grid-template-columns: 1fr max-content;
-  column-gap: 50px;
+  column-gap: 40px;
   margin: 0;
   padding: 0;
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 
   @include vp-1199 {
     column-gap: 29px;
@@ -113,13 +116,13 @@
   h2 {
     display: flex;
     width: 100%;
-    margin: 0;
+    margin: 0 0 0 15px;
     padding: 0;
     font-family: $font-family-primery;
     font-weight: $font-weight-semibold;
     font-size: 82px;
-    line-height: 79px;
-    letter-spacing: 2.46px;
+    line-height: 82px;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
@@ -145,10 +148,11 @@
     li {
       margin: 0;
       padding: 0;
+      padding-top: 5px;
     }
 
     li:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 7px;
 
       @include vp-1199 {
         margin-bottom: 13px;
@@ -161,7 +165,7 @@
       font-weight: $font-weight-regular;
       margin: 0;
       padding: 0;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
 
       @include vp-1199 {
         font-size: 12px;
@@ -180,7 +184,7 @@
       font-size: 40px;
       line-height: 45px;
       border-top: 1px solid $color-default-white;
-      padding-top: 5px;
+      padding-top: 7px;
 
       @include vp-1199 {
         font-size: 24px;
@@ -232,6 +236,8 @@
 }
 
 .super-games__image-container {
+    padding: 0;
+    margin: 0;
     width: 660px;
     height: auto;
 

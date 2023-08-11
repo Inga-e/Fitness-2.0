@@ -1,5 +1,6 @@
 .promotion {
   padding: 120px 103px;
+  margin: 0 auto;
 
   @include vp-1199 {
     padding: 91px 45px 100px 45px;
@@ -10,10 +11,8 @@
   }
 
   h2 {
-    margin: 0;
+    margin: 15px auto 34px;
     padding: 0;
-    margin-top: 15px;
-    margin-bottom: 34px;
     text-align: center;
     font-family: $font-family-primery;
     font-weight: $font-weight-semibold;
@@ -65,6 +64,7 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 40px;
   margin: 0 auto;
+  width: 1160px;
 
   @include vp-1199 {
     display: flex;
@@ -94,7 +94,7 @@
     }
 
     li {
-      padding: 28px 28px 18px 18px;
+      padding: 26px 28px 18px 18px;
       border-width: 7px;
       border-image: $crimson-to-smalt;
       border-style: solid;
@@ -117,7 +117,7 @@
         padding: 0;
         font-weight: $font-weight-bold;
         font-size: 26px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
         @include vp-767 {
           text-align: center;

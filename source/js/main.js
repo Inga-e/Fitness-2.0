@@ -5,7 +5,7 @@ import {initTabs} from './modules/init-tabs';
 import {initAccordions} from './modules/init-accordion';
 import {swiperFeedback} from './modules/feedback-swiper';
 import {swiperCoaches} from './modules/coaches-swiper';
-import {isChangeAccordionButtons} from './modules/faq-buttons';
+import {isChangeAccordionButtons, isResizePaddingBottom} from './modules/faq-buttons';
 import {openVideo} from './modules/video';
 
 // ---------------------------------
@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     swiperFeedback;
     swiperCoaches;
+    isResizePaddingBottom();
     isChangeAccordionButtons();
     openVideo();
   });
