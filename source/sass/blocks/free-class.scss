@@ -17,12 +17,15 @@
   @include vp-1199 {
     justify-content: center;
     margin: 0 auto;
-    padding: 70px 0;
-    min-width: 472px;
+    padding: 62px 0 69px;
+    align-items: flex-start;
+    min-width: 0;
+    width: 502px;
   }
 
   @include vp-767 {
-    min-width: 290px;
+    width: 320px;
+    padding: 64px 15px 70px;
   }
 
   h2 {
@@ -42,8 +45,9 @@
     @include vp-1199 {
       font-size: 42px;
       line-height: 50px;
-      letter-spacing: 1.26px;
-      margin-bottom: 40px;
+      letter-spacing: 1.5px;
+      margin-left: 0;
+      margin-bottom: 27px;
     }
 
     @include vp-767 {
@@ -68,7 +72,10 @@
     }
 
     @include vp-767 {
+      margin: 0 auto;
       min-width: 290px;
+      max-width: 0;
+      align-items: center;
     }
 
     fieldset {
@@ -78,103 +85,6 @@
       background-color: transparent;
       margin: 0;
       padding: 0;
-
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 28px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 30px;
-        width: 410px;
-
-        @include vp-1199 {
-          column-gap: 60px;
-          width: 472px;
-        }
-
-        @include vp-767 {
-          display: flex;
-          flex-direction: column;
-          width: 290px;
-          margin-bottom: 0;
-        }
-
-        li {
-          padding: 0;
-          margin: 0;
-          width: 100%;
-
-          @include vp-767 {
-            margin-bottom: 40px;
-          }
-        }
-
-        input {
-          border: none;
-          background-color: transparent;
-          color: $color-default-white;
-          font-family: $font-family-secondary;
-          font-weight: $font-weight-regular;
-          font-size: 14px;
-          line-height: 16px;
-          padding-top: 10px;
-          padding-bottom: 5px;
-          width: 100%;
-          border: 1px solid transparent;
-          border-bottom-color: rgba(255, 255, 255, 0.5);
-
-          &::placeholder {
-            font-family: $font-family-secondary;
-            font-weight: $font-weight-regular;
-            font-size: 14px;
-            line-height: 16px;
-            color: $color-default-white;
-          }
-
-          @include hover {
-            border-bottom-color: $color-default-white;
-          }
-
-          @include focus {
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            padding-left: 10px;
-
-            &::placeholder {
-              color: $color-sapphire-blue;
-            }
-          }
-
-          &:disabled {
-            border-bottom-color: rgba(255, 255, 255, 0.3);
-
-            &::placeholder {
-              opacity: 0.4;
-            }
-          }
-        }
-
-        div.is-invalid {
-          border-bottom-color: $color-torch-red;
-          color: $color-torch-red;
-          font-family: $font-family-secondary;
-          font-weight: $font-weight-regular;
-          font-size: 14px;
-          line-height: 25px;
-
-         input {
-            border-bottom-color: $color-torch-red;
-          }
-        }
-
-        div.is-valid {
-          font-family: $font-family-secondary;
-          font-weight: $font-weight-regular;
-          font-size: 14px;
-          line-height: 25px;
-        }
-      }
     }
 
     button {
@@ -191,6 +101,10 @@
       border: none;
       outline: 3px solid $color-default-white;
       outline-offset: -3px;
+
+      @include vp-1199 {
+        padding: 19px 21px 19px;
+      }
 
       @include hover {
         background-color: $color-default-white;
@@ -211,7 +125,6 @@
       }
 
       @include hover-focus {
-
         @include vp-1199 {
           background-color: $color-default-white;
           color: $color-sapphire-blue;
@@ -223,6 +136,112 @@
         color: $color-default-white;
         outline: none;
       }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    width: 410px;
+
+    @include vp-1199 {
+      column-gap: 60px;
+      width: 472px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      width: 290px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      @include vp-767 {
+        margin-bottom: 26px;
+      }
+    }
+
+    input {
+      background-color: transparent;
+      color: $color-default-white;
+      font-family: $font-family-secondary;
+      font-weight: $font-weight-regular;
+      font-size: 14px;
+      line-height: 16px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      width: 100%;
+      border: 1px solid transparent;
+      border-bottom-color: rgba(255, 255, 255, 0.5);
+
+      @include vp-1199 {
+        padding-bottom: 7px;
+        padding-left: 0;
+      }
+
+      &::placeholder {
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-regular;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-default-white;
+
+        @include vp-1199 {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      @include hover {
+        border-bottom-color: $color-default-white;
+      }
+
+      @include focus {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding-left: 10px;
+
+        &::placeholder {
+          color: $color-sapphire-blue;
+        }
+      }
+
+      &:disabled {
+        border-bottom-color: rgba(255, 255, 255, 0.3);
+
+        &::placeholder {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    div.is-invalid {
+      border-bottom-color: $color-torch-red;
+      color: $color-torch-red;
+      font-family: $font-family-secondary;
+      font-weight: $font-weight-regular;
+      font-size: 14px;
+      line-height: 25px;
+
+      input {
+        border-bottom-color: $color-torch-red;
+      }
+    }
+
+    div.is-valid {
+      font-family: $font-family-secondary;
+      font-weight: $font-weight-regular;
+      font-size: 14px;
+      line-height: 25px;
     }
   }
 }

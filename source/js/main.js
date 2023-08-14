@@ -29,8 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initTabs();
     initAccordions();
-    swiperFeedback;
-    swiperCoaches;
+    swiperFeedback();
+    swiperCoaches();
     isResizePaddingBottom();
     isChangeAccordionButtons();
     openVideo();

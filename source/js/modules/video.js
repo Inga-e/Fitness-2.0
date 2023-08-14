@@ -14,7 +14,7 @@ function openVideo() {
   videoButton.onclick = function () {
     videoViewPort.classList.add('is-shown');
     videoImage.classList.add('is-hidden');
-  }
+  };
 
   document.addEventListener('keydown', onDocumentKeydown);
 }

@@ -9,16 +9,22 @@
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 40px 45px 15px 45px;
+    padding: 35px 45px 25px 45px;
+    width: 100%;
   }
 
   @include vp-767 {
-    padding: 15px;
+    padding: 16px 15px 15px;
   }
 }
 
 .main-header__logo {
   padding-top: 10px;
+
+
+  @include vp-1199 {
+    padding-top: 0;
+  }
 }
 
 .main-header__phone {
@@ -47,7 +53,7 @@
     opacity: 0.8;
 
     @include vp-1199 {
-      opacity: 1;
+      display: none;
     }
   }
 
@@ -55,12 +61,11 @@
     outline: 2px solid $color-default-white;
 
     @include vp-1199 {
-      outline: none;
+      display: none;
     }
   }
 
   @include hover-focus {
-
     @include vp-1199 {
       outline: 2px solid $color-default-white;
     }

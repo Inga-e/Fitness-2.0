@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Описание проекта">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font">
   <title>
     Fitness 2.0
   </title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="../../favicon.ico">
 </head>
 
 <body>
@@ -539,7 +542,7 @@
             </div>
           </div>
           <div class="swiper-slide coaches__trainers-slide focus-visible" tabindex="0">
-            <div class="coaches1__image-container">
+            <div class="coaches__image-container">
               <picture>
                 <source type="image/webp"
                   srcset="../../img/trainer4-desktop.webp 1x, ../../img/trainer4-desktop@2x.webp 2x">
@@ -857,7 +860,7 @@
                 Месяц бесплатно
               </h3>
               <p>
-                Приведи друга, получи абонемент в подарок
+                Приведи друга, получи <br> абонемент в подарок
               </p>
             </div>
             <a class="focus-visible" href="actions.html">
@@ -895,7 +898,7 @@
               Центр
             </li>
             <li class="focus-visible" tabindex="0" data-tabs="control">
-              Абонементы
+              Абонемент
             </li>
             <li class="focus-visible" tabindex="0" data-tabs="control">
               Услуги
@@ -907,14 +910,16 @@
           <div class="faq__description-wrapper accordions" data-accordion="parent" data-tabs="content">
             <ul class="for-load" data-tabs="element">
               <li data-accordion="element">
-                <b>
-                  Как стать членом фитнес-центра?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Как стать членом фитнес-центра?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
@@ -923,14 +928,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Где можно посмотреть расписание?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Где можно посмотреть расписание?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
@@ -939,14 +946,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Есть кулеры в центре? Предоставляются полотенца?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Есть кулеры в центре? Предоставляются полотенца?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
@@ -955,14 +964,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Сколько тренеров работает в клубе и какова их квалификация?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Сколько тренеров работает в клубе и какова <br> их квалификация?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
@@ -973,14 +984,16 @@
             </ul>
             <ul data-tabs="element">
               <li data-accordion="element">
-                <b>
-                  Занятия с тренером входят в абонемент?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Занятия с тренером входят в абонемент?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
@@ -990,14 +1003,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Можно ли заморозить абонемент?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Можно ли заморозить абонемент?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
@@ -1007,14 +1022,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Есть ли лимит по посещениям тренажерного зала и групповых занятий?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Есть ли лимит по посещениям тренажерного зала и групповых занятий?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
@@ -1024,14 +1041,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Что такое семейный доступ и доступ для друзей?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Что такое семейный доступ и доступ для друзей?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
@@ -1043,14 +1062,17 @@
             </ul>
             <ul data-tabs="element">
               <li data-accordion="element">
-                <b>
-                  Предлагает ли клуб услуги по консультированию по вопросам питания?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Предлагает ли клуб услуги <br class="faq__products-break"> по консультированию <br
+                      class="faq__products-break"> по вопросам питания?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши
@@ -1059,14 +1081,17 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Проводятся ли в клубе какие-либо мероприятия или соревнования?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Проводятся ли в клубе <br class="faq__products-break"> какие-либо мероприятия <br
+                      class="faq__products-break"> или соревнования?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Каждую неделю проводятся мероприятия для детей и раз в 2 неделе соревнования для всех
@@ -1074,14 +1099,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Можно ли приобрести в центре спортивное питание?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Можно ли приобрести в центре спортивное питание?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши
@@ -1090,14 +1117,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Есть ли в центре детская комната?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Есть ли в центре детская комната?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши
@@ -1108,14 +1137,16 @@
             </ul>
             <ul data-tabs="element">
               <li data-accordion="element">
-                <b>
-                  Есть в фитнес-центре дресс-код?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Есть в фитнес-центре дресс-код?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
@@ -1128,14 +1159,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Можно ли приводить с собой детей на тренировки?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Можно ли приводить с собой детей на тренировки?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Да, конечно. У нас есть отдельные занятия для детей, имеется комната занятий для детей.
@@ -1143,14 +1176,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Какие дополнительные правила посещения центра?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Какие дополнительные правила посещения центра?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
@@ -1162,14 +1197,16 @@
                 </div>
               </li>
               <li data-accordion="element">
-                <b>
-                  Нужна ли медицинская справка для посещения залов и бассейна?
-                </b>
-                <button class="focus-visible" type="button" data-accordion="button">
-                  <span class="visually-hidden">
-                    Показать комментарий
-                  </span>
-                </button>
+                <div class="faq__question-button-wrapper">
+                  <b>
+                    Нужна ли медицинская справка для посещения залов и бассейна?
+                  </b>
+                  <button class="focus-visible" type="button" data-accordion="button">
+                    <span class="visually-hidden">
+                      Показать комментарий
+                    </span>
+                  </button>
+                </div>
                 <div class="faq__description" data-accordion="content">
                   <p>
                     Да, нужна. У нас есть медицинский кабинет, в котором можно ее получить.
@@ -1345,8 +1382,8 @@
         <a class="main-footer__logo logo focus-visible" href="#">
           <span>
             <picture>
+              <source media="(max-width: 767px)" srcset="../../img/svg/logo-footer-mobile.svg" width="67" height="13">
               <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="18">
-              <source media="(max-width: 767px)" srcset="../../img/svg/logo-mobile.svg" width="69" height="24">
               <img src="../../img/svg/logo-footer-desktop.svg" width="88" height="32" alt="логотип Supergym">
             </picture>
           </span>
@@ -1420,63 +1457,5 @@
   <script src="../../js/main.min.js">
   </script>
 </body>
-
-
-<!--
-<body>
-  <div class="wrapper">
-    <header>
-      <div class="container"></div>
-    </header>
-    <main>
-      <section class="intro">
-        <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container"></div>
-    </footer>
-  </div>-->
-
-<!-- Модалки -->
-<!-- <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>
-</body>
--->
 
 </html>

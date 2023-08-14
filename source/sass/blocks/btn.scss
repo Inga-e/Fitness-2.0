@@ -10,16 +10,10 @@
   text-transform: uppercase;
   color: $color-default-white;
   justify-content: center;
-
   background-color: transparent;
   cursor: pointer;
-
   transition: opacity $trans-default;
-/*
-  &--red {
-    background-color: $color-torch-red;
-  }
-*/
+
   &:disabled {
     opacity: 0.5;
 

@@ -1,18 +1,19 @@
 .hero-block {
- padding: 70px 0;
- display: flex;
- width: 1160px;
- color: $color-default-white;
- margin: 0 auto;
+  padding: 70px 0;
+  display: flex;
+  width: 1160px;
+  color: $color-default-white;
+  margin: 0 auto;
 
- @include vp-1199 {
-  padding: 42px 45px 82px 45px;
-}
+  @include vp-1199 {
+    padding: 42px 45px 82px 45px;
+    width: 100%;
+  }
 
   @include vp-767 {
     margin: 0 auto;
-    padding: 60px 15px 80px 15px;
-}
+    padding: 52px 15px 80px 14px;
+  }
 }
 
 .hero-block__text-container {
@@ -52,11 +53,14 @@
       font-size: 72px;
       line-height: 86px;
       letter-spacing: 3.6px;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      text-transform: none;
+      text-shadow: -3px 0 0 $color-default-white;
     }
 
     @include vp-767 {
       width: 213px;
+      margin-bottom: 24px;
     }
   }
 
@@ -78,7 +82,7 @@
       line-height: 41px;
       letter-spacing: 1.02px;
       text-align: end;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
 
     @include vp-767 {
@@ -86,7 +90,8 @@
       line-height: 34px;
       letter-spacing: 0.84px;
       text-align: end;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      margin-right: 5px;
     }
   }
 
@@ -102,19 +107,17 @@
     line-height: 21px;
 
     @include vp-1199 {
-      top: 135px;
+      top: 136px;
+      right: 210px;
     }
 
     @include vp-767 {
-      top: 124px;
+      top: 126px;
+      right: 177px;
     }
 
     li:not(:last-child) {
       margin-bottom: 0;
-
-      @include vp-1199 {
-        margin-bottom: 5px;
-      }
     }
   }
 }
@@ -152,7 +155,6 @@
   }
 
   @include hover-focus {
-
     @include vp-1199 {
       background-color: $color-default-white;
       color: $color-egyptian-blue;
@@ -175,7 +177,7 @@
   height: 556px;
 
   @include vp-1199 {
-    margin-top: -30px;
+    margin-top: -50px;
     width: 324px;
     height: 390px;
   }
