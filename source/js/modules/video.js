@@ -12,8 +12,10 @@ const onDocumentKeydown = () => {
 
 function openVideo() {
   videoButton.onclick = function () {
-    videoViewPort.classList.add('is-shown');
-    videoImage.classList.add('is-hidden');
+    if (videoViewPort) {
+      videoViewPort.classList.add('is-shown');
+      videoImage.classList.add('is-hidden');
+    } return;
   };
 
   document.addEventListener('keydown', onDocumentKeydown);

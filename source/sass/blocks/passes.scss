@@ -29,6 +29,10 @@
     bottom: -95px;
     z-index: 1;
 
+    @include retina {
+      background-image: url("../../img/background/pancakes-for-barbell@2x.png");
+    }
+
     @include vp-1199 {
       width: 289px;
       height: 345px;
@@ -130,7 +134,7 @@
         padding-right: 3px;
       }
 
-      @include hover {
+      &:hover {
         color: $color-sapphire-blue;
 
         &::before {
@@ -142,14 +146,10 @@
           width: 100%;
           height: 2px;
           background-color: $color-crimson-red;
-        }
-
-        @include vp-1199 {
-          display: none;
         }
       }
 
-      @include focus {
+      &:focus-visible {
         color: $color-sapphire-blue;
 
         &::before {
@@ -161,10 +161,6 @@
           width: 100%;
           height: 2px;
           background-color: $color-crimson-red;
-        }
-
-        @include vp-1199 {
-          display: none;
         }
       }
 
@@ -219,9 +215,10 @@
       }
     }
 
-    .disabled {
+    .no-action {
       color: rgba(16, 38, 84, 0.3);
       cursor: default;
+      pointer-events: none;
 
       &::before {
         position: absolute;
@@ -296,7 +293,7 @@
         margin-bottom: 36px;
       }
 
-      @include hover {
+      &:hover {
         border-width: 7px;
         border-image: $crimson-to-smalt;
         border-style: solid;
@@ -306,14 +303,10 @@
           color: $color-default-white;
           background: $red-to-blue;
           outline: none;
-        }
-
-        @include vp-1199 {
-          display: none;
         }
       }
 
-      @include focus {
+      &:focus-visible {
         border-width: 7px;
         border-image: $crimson-to-smalt;
         border-style: solid;
@@ -323,10 +316,6 @@
           color: $color-default-white;
           background: $red-to-blue;
           outline: none;
-        }
-
-        @include vp-1199 {
-          display: none;
         }
       }
 
@@ -445,6 +434,11 @@
         outline: 2px solid $color-sapphire-blue;
         outline-offset: -2px;
 
+        .no-action {
+          opacity: 0.3;
+          cursor: default;
+        }
+
         @include vp-1199 {
           padding: 27px 45px 25px;
         }
@@ -453,24 +447,20 @@
           width: 100%;
         }
 
-        @include hover {
+        &:hover {
           color: $color-default-white;
           background: $red-to-blue;
           outline: none;
-
-          @include vp-1199 {
-            display: none;
-          }
         }
 
-        @include focus {
+        &:active {
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        &:focus-visible {
           color: $color-default-white;
           background: $red-to-blue;
           outline: none;
-
-          @include vp-1199 {
-            display: none;
-          }
         }
 
         @include hover-focus {
@@ -479,14 +469,6 @@
             background: $red-to-blue;
             outline: none;
           }
-        }
-
-        @include active {
-          color: rgba(255, 255, 255, 0.7);
-        }
-
-        &.disabled {
-          opacity: 0.3;
         }
       }
     }

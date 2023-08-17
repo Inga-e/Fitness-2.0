@@ -19,8 +19,7 @@
 }
 
 .main-header__logo {
-  padding-top: 10px;
-
+  margin-top: 5px;
 
   @include vp-1199 {
     padding-top: 0;
@@ -49,29 +48,23 @@
     letter-spacing: 0.4px;
   }
 
-  @include hover {
+  &:hover {
     opacity: 0.8;
-
-    @include vp-1199 {
-      display: none;
-    }
   }
 
-  @include focus {
-    outline: 2px solid $color-default-white;
+  @include active {
+    opacity: 0.4;
+  }
 
-    @include vp-1199 {
-      display: none;
-    }
+  &:focus-visible {
+    outline: 2px solid $color-default-white;
+    outline-offset: 5px;
   }
 
   @include hover-focus {
     @include vp-1199 {
       outline: 2px solid $color-default-white;
+      outline-offset: 5px;
     }
-  }
-
-  @include active {
-    opacity: 0.4;
   }
 }

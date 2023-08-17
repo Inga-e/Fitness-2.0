@@ -101,27 +101,26 @@
       border: none;
       outline: 3px solid $color-default-white;
       outline-offset: -3px;
+      cursor: pointer;
 
       @include vp-1199 {
         padding: 19px 21px 19px;
       }
 
-      @include hover {
+      &:hover {
         background-color: $color-default-white;
         color: $color-sapphire-blue;
-
-        @include vp-1199 {
-          display: none;
-        }
       }
 
-      @include focus {
+      &:active {
+        background-image: $red-to-blue;
+        color: $color-default-white;
+        outline: none;
+      }
+
+      &:focus-visible {
         background-color: $color-default-white;
         color: $color-sapphire-blue;
-
-        @include vp-1199 {
-          display: none;
-        }
       }
 
       @include hover-focus {
@@ -129,12 +128,6 @@
           background-color: $color-default-white;
           color: $color-sapphire-blue;
         }
-      }
-
-      @include active {
-        background-image: $red-to-blue;
-        color: $color-default-white;
-        outline: none;
       }
     }
   }
@@ -202,11 +195,11 @@
         }
       }
 
-      @include hover {
+      &:hover {
         border-bottom-color: $color-default-white;
       }
 
-      @include focus {
+      &:focus-visible {
         border: 1px solid rgba(255, 255, 255, 0.5);
         padding-left: 10px;
 

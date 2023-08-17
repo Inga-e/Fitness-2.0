@@ -69,6 +69,7 @@
   height: 294px;
   margin: 0 auto;
   padding: 0;
+  cursor: pointer;
 
   @include vp-1199 {
     width: 268px;
@@ -79,14 +80,14 @@
     height: 274px;
   }
 
-  @include hover {
+  &:hover {
     .coaches__text {
       background-color: rgba(16, 38, 84, 0.89);
       height: 100%;
       position: absolute;
 
       @include vp-1199 {
-        display: none;
+        background-color: transparent;
       }
     }
 
@@ -94,7 +95,11 @@
       top: 25px;
 
       @include vp-1199 {
-        display: none;
+        top: 218px;
+      }
+
+      @include vp-767 {
+        top: 198px;
       }
     }
 
@@ -108,13 +113,9 @@
         display: none;
       }
     }
-
-    @include vp-1199 {
-      display: none;
-    }
   }
 
-  @include focus {
+  &:focus-visible {
     .coaches__text {
       background-color: rgba(16, 38, 84, 0.89);
       height: 100%;
@@ -145,17 +146,19 @@
     }
   }
 
-  @include active {
+  &:active {
     @include vp-1199 {
-      .coaches1__text {
+      .coaches__text {
+        display: block;
         background-color: rgba(16, 38, 84, 0.89);
       }
 
       h3 {
-        top: 25px;
+        display: block;
+        top: 55px;
 
         @include vp-767 {
-          top: 15px;
+          top: 45px;
         }
       }
 
@@ -363,20 +366,12 @@
     }
   }
 
-  @include hover {
+  &:hover {
     border: 1px solid $color-sapphire-blue;
-
-    @include vp-1199 {
-      display: none;
-    }
   }
 
-  @include focus {
+  &:focus-visible {
     border: 1px solid $color-sapphire-blue;
-
-    @include vp-1199 {
-      display: none;
-    }
   }
 
   @include hover-focus {
@@ -385,7 +380,7 @@
     }
   }
 
-  @include active {
+  &:active {
     background-color: $color-sapphire-blue;
     color: $color-default-white;
   }

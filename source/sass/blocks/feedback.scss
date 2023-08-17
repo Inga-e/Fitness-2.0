@@ -213,11 +213,16 @@
     }
   }
 
-  @include hover {
+  &:hover {
     border: 1px solid $color-sapphire-blue;
   }
 
-  @include focus {
+  &:active {
+    background-color: $color-sapphire-blue;
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
     border: 1px solid $color-sapphire-blue;
   }
 
@@ -225,11 +230,6 @@
     @include vp-1199 {
       border: 1px solid $color-sapphire-blue;
     }
-  }
-
-  @include active {
-    background-color: $color-sapphire-blue;
-    color: $color-default-white;
   }
 
   &:disabled {

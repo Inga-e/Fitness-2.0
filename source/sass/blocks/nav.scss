@@ -49,7 +49,7 @@
     font-size: 16px;
   }
 
-  @include hover {
+  &:hover {
     margin-left: 5px;
     margin-right: 5px;
     padding-left: 0;
@@ -57,7 +57,11 @@
     border-bottom-color: $color-default-white;
   }
 
-  @include focus {
+  &:active {
+    border-color: transparent;
+  }
+
+  &:focus-visible {
     margin-left: 0;
     margin-right: 0;
     padding-left: 5px;
@@ -65,12 +69,9 @@
     border-color: $color-default-white;
   }
 
-  @include active {
-    border-color: transparent;
-  }
-
-  .disabled {
+  &.no-active {
     opacity: 0.4;
     cursor: default;
+    pointer-events: none;
   }
 }

@@ -77,22 +77,19 @@
       margin-left: 0;
     }
 
-    @include hover {
+    &:hover {
       background-color: $color-default-white;
       color: $color-sapphire-blue;
-
-      @include vp-1199 {
-        display: none;
-      }
     }
 
-    @include focus {
+    &:active {
+      background-color: $color-default-white;
+      color: $color-torch-blackred;
+    }
+
+    &:focus-visible {
       background-color: $color-default-white;
       color: $color-sapphire-blue;
-
-      @include vp-1199 {
-        display: none;
-      }
     }
 
     @include hover-focus {
@@ -100,6 +97,12 @@
         background-color: $color-default-white;
         color: $color-sapphire-blue;
       }
+    }
+
+    &.no-active {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
     }
   }
 }

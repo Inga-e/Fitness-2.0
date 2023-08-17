@@ -100,8 +100,9 @@
       justify-content: center;
       align-items: center;
       margin: 0;
-      padding: 17px 18px;
-      border: 1px solid rgba(16, 38, 84, 0.2);
+      padding: 18px 18px;
+      outline: 1px solid rgba(16, 38, 84, 0.2);
+      outline-offset: -1px;
       margin-bottom: 10px;
       font-weight: $font-weight-medium;
       font-size: 18px;
@@ -117,36 +118,36 @@
         padding: 13px;
       }
 
-      @include hover {
-        border-color: $color-sapphire-blue;
-
-        @include vp-1199 {
-          display: none;
-        }
+      &:hover {
+        outline: 1px solid $color-sapphire-blue;
+        outline-offset: -1px;
       }
 
-      @include focus {
-        border-color: $color-sapphire-blue;
+      &.is-open {
+        background-image: $red-to-blue;
+        color: $color-default-white;
+        outline: 1px solid transparent;
+        outline-offset: -1px;
+      }
 
-        @include vp-1199 {
-          display: none;
-        }
+      &:focus-visible {
+        outline: 1px solid $color-sapphire-blue;
+        outline-offset: -1px;
       }
 
       @include hover-focus {
         @include vp-1199 {
-          border-color: $color-sapphire-blue;
+          outline: 1px solid $color-sapphire-blue;
+          outline-offset: -1px;
         }
       }
 
-      @include active {
-        background-image: $red-to-blue;
-        color: $color-default-white;
-      }
-
-      .disabled {
-        border-color: rgba(16, 38, 84, 0.2);
+      &.no-active {
+        outline: 1px solid rgba(16, 38, 84, 0.2);
+        outline-offset: -1px;
         color: $color-link-water-grey;
+        pointer-events: none;
+        cursor: default;
       }
     }
   }
@@ -265,6 +266,7 @@
     position: relative;
     border: 1px solid $color-sapphire-blue;
     align-self: center;
+    cursor: pointer;
 
     @include vp-767 {
       width: 32px;
@@ -310,29 +312,21 @@
       }
     }
 
-    @include hover {
+    &:hover {
       background-color: $color-sapphire-blue;
 
       &::before,
       &::after {
         background-color: $color-default-white;
-      }
-
-      @include vp-1199 {
-        display: none;
       }
     }
 
-    @include focus {
+    &:focus-visible {
       background-color: $color-sapphire-blue;
 
       &::before,
       &::after {
         background-color: $color-default-white;
-      }
-
-      @include vp-1199 {
-        display: none;
       }
     }
 
@@ -349,6 +343,7 @@
 
     &:disabled {
       opacity: 0.3;
+      cursor: default;
     }
   }
 }

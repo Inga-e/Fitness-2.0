@@ -44,17 +44,18 @@
     text-transform: uppercase;
     width: max-content;
 
-    @include hover {
+    &:hover {
       opacity: 0.8;
     }
 
-    @include active {
+    &:active {
       opacity: 1;
     }
 
     /* деактивация кнопки */
-    .disabled {
+    &.no-active {
       opacity: 0.3;
+      cursor: default;
     }
   }
 }
@@ -130,9 +131,16 @@
           border-bottom: 1px solid $color-sapphire-blue;
         }
 
+        &:active {
+          color: $color-sapphire-blue;
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: 0.6px;
+          border-color: transparent;
+        }
+
         @include focus {
           padding: 9px;
-          outline: none;
           border: 1px solid $color-sapphire-blue;
 
           span {
@@ -140,21 +148,21 @@
           }
         }
 
-        @include active {
-          color: $color-sapphire-blue;
-          font-size: 12px;
-          line-height: 14px;
-          letter-spacing: 0.6px;
-          border-color: transparent;
+        @include hover-focus {
+          @include vp-1199 {
+            padding: 9px;
+            border: 1px solid $color-sapphire-blue;
 
-          span {
-            border-bottom: 1px solid $color-sapphire-blue;
+            span {
+              border-bottom: none;
+            }
           }
         }
       }
     }
   }
 }
+
 
 .promotion__item-content-wrapper {
   padding-left: 10px;
@@ -260,17 +268,7 @@
       border-bottom: 1px solid $color-default-white;
     }
 
-    @include focus {
-      padding: 9px;
-      outline: none;
-      border: 1px solid $color-default-white;
-
-      span {
-        border-bottom: none;
-      }
-    }
-
-    @include active {
+    &:active {
       color: $color-default-white;
       font-size: 14px;
       line-height: 16px;
@@ -279,6 +277,26 @@
 
       span {
         border-bottom: 1px solid $color-default-white;
+      }
+    }
+
+    &:focus-visible {
+      padding: 9px;
+      border: 1px solid $color-default-white;
+
+      span {
+        border-bottom: none;
+      }
+    }
+
+    @include hover-focus {
+      @include vp-1199 {
+        padding: 9px;
+        border: 1px solid $color-default-white;
+
+        span {
+          border-bottom: none;
+        }
       }
     }
   }

@@ -128,30 +128,24 @@
   padding-top: 20px;
   padding-bottom: 19px;
 
-  @include vp-1199 {
-    min-width: 183px;
-  }
-
-  @include vp-767 {
-    width: 100%;
-  }
-
-  @include hover {
+  &:hover {
     background-color: $color-default-white;
     color: $color-egyptian-blue;
-
-    @include vp-1199 {
-      display: none;
-    }
   }
 
-  @include focus {
+  @include active {
+    color: $color-sapphire-blue;
+  }
+
+  &:focus-visible {
     background-color: $color-default-white;
     color: $color-egyptian-blue;
+  }
 
-    @include vp-1199 {
-      display: none;
-    }
+  &.no-active {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
   }
 
   @include hover-focus {
@@ -161,13 +155,12 @@
     }
   }
 
-  @include active {
-    color: $color-sapphire-blue;
+  @include vp-1199 {
+    min-width: 183px;
   }
 
-  /*переделать*/
-  &--disabled {
-    opacity: 0.5;
+  @include vp-767 {
+    width: 100%;
   }
 }
 
