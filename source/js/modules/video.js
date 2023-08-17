@@ -1,10 +1,12 @@
-const isEscapeKey = (evt) => evt.key === 'Escape';
-
 const videoViewPort = document.querySelector('[data-iframe="play"]');
 const videoButton = document.querySelector('[data-video-button]');
 const videoImage = document.querySelector('[data-image-video]');
 
-const onDocumentKeydown = () => {
+function isEscapeKey(evt) {
+  evt.key === 'Escape';
+};
+
+function onDocumentKeydown() {
   if (isEscapeKey) {
     closeVideo();
   }
