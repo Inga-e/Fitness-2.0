@@ -3,14 +3,14 @@ const videoButton = document.querySelector('[data-video-button]');
 const videoImage = document.querySelector('[data-image-video]');
 
 function isEscapeKey(evt) {
-  evt.key === 'Escape';
-};
+  return evt.key === 'Escape';
+}
 
 function onDocumentKeydown() {
   if (isEscapeKey) {
     closeVideo();
   }
-};
+}
 
 function openVideo() {
   videoButton.onclick = function () {

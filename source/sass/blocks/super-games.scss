@@ -209,23 +209,34 @@
         padding: 0;
       }
     }
+  }
+}
 
-    .super-games__date-month-year-wrapper {
-      display: grid;
-      grid-template-columns: max-content max-content;
-      column-gap: 7px;
-      padding-top: 5px;
-      width: max-content;
-      border-top: 1px solid $color-default-white;
+.super-games__date-month-year-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 7px;
+  padding-top: 5px;
+  width: max-content;
+  border-top: 1px solid $color-default-white;
 
-      @include vp-1199 {
-        column-gap: 3px;
-      }
+  @include vp-1199 {
+    column-gap: 3px;
+  }
 
-      b {
-        border-top: none;
-        padding-top: 0;
-      }
+  h4 {
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    vertical-align: top;
+    font-weight: $font-weight-bold;
+    font-size: 40px;
+    line-height: 45px;
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 24px;
+      padding: 0;
     }
   }
 }
