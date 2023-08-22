@@ -80,127 +80,62 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
 
-  ol {
+.passes__tabs-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+
+  @include vp-1199 {
+    margin-bottom: 46px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  li {
     display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: rgba(16, 38, 84, 0.5);
     position: relative;
-    margin-bottom: 40px;
 
     @include vp-1199 {
-      margin-bottom: 46px;
+      font-size: 18px;
+      line-height: 27px;
     }
 
     @include vp-767 {
-      margin-bottom: 35px;
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 14px;
+      padding-right: 3px;
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 2px;
-      background-color: rgba(120, 120, 120, 0.2);
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    li {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-      font-size: 20px;
-      line-height: 32px;
-      padding-bottom: 10px;
-      cursor: pointer;
-      color: rgba(16, 38, 84, 0.5);
-      position: relative;
-
-      @include vp-1199 {
-        font-size: 18px;
-        line-height: 27px;
-      }
-
-      @include vp-767 {
-        font-size: 16px;
-        line-height: 24px;
-        padding-bottom: 14px;
-        padding-right: 3px;
-      }
-
-      &:hover {
-        color: $color-sapphire-blue;
-
-        &::before {
-          position: absolute;
-          content: "";
-          bottom: 0;
-          left: 0;
-          z-index: 2;
-          width: 100%;
-          height: 2px;
-          background-color: $color-crimson-red;
-        }
-      }
-
-      &:focus-visible {
-        color: $color-sapphire-blue;
-
-        &::before {
-          position: absolute;
-          content: "";
-          bottom: 0;
-          left: 0;
-          z-index: 2;
-          width: 100%;
-          height: 2px;
-          background-color: $color-crimson-red;
-        }
-      }
-
-      @include hover-focus {
-        @include vp-1199 {
-          color: $color-sapphire-blue;
-
-          &::before {
-            position: absolute;
-            content: "";
-            bottom: 0;
-            left: 0;
-            z-index: 2;
-            width: 100%;
-            height: 2px;
-            background-color: $color-crimson-red;
-          }
-        }
-      }
-    }
-
-    li:not(:last-child) {
-      margin-right: 46px;
-
-      @include vp-1199 {
-        margin-right: 54px;
-      }
-
-      @include vp-767 {
-        margin-right: 42px;
-      }
-    }
-
-    li:nth-child(3n) {
-      @include vp-767 {
-        margin-right: 0;
-      }
-    }
-
-    .is-active {
+    &:hover {
       color: $color-sapphire-blue;
 
       &::before {
@@ -215,30 +150,95 @@
       }
     }
 
-    .no-action {
-      color: rgba(16, 38, 84, 0.3);
-      cursor: default;
-      pointer-events: none;
+    &:focus-visible {
+      color: $color-sapphire-blue;
 
       &::before {
         position: absolute;
         content: "";
         bottom: 0;
-        left: -46px;
-        z-index: 3;
-        width: calc(100% + 92px);
+        left: 0;
+        z-index: 2;
+        width: 100%;
         height: 2px;
-        background-color: $color-ghost-white;
+        background-color: $color-crimson-red;
+      }
+    }
 
-        @include vp-1199 {
-          left: -54px;
-          width: calc(100% + 108px);
-        }
+    @include hover-focus {
+      @include vp-1199 {
+        color: $color-sapphire-blue;
 
-        @include vp-767 {
-          left: -42px;
-          width: calc(100% + 84px);
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          width: 100%;
+          height: 2px;
+          background-color: $color-crimson-red;
         }
+      }
+    }
+  }
+
+  li:not(:last-child) {
+    margin-right: 46px;
+
+    @include vp-1199 {
+      margin-right: 54px;
+    }
+
+    @include vp-767 {
+      margin-right: 42px;
+    }
+  }
+
+  li:nth-child(3n) {
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
+  .is-active {
+    color: $color-sapphire-blue;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 2px;
+      background-color: $color-crimson-red;
+    }
+  }
+
+  .no-action {
+    color: rgba(16, 38, 84, 0.3);
+    cursor: default;
+    pointer-events: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: -46px;
+      z-index: 3;
+      width: calc(100% + 92px);
+      height: 2px;
+      background-color: $color-ghost-white;
+
+      @include vp-1199 {
+        left: -54px;
+        width: calc(100% + 108px);
+      }
+
+      @include vp-767 {
+        left: -42px;
+        width: calc(100% + 84px);
       }
     }
   }
@@ -270,171 +270,171 @@
       flex-direction: column;
       flex-wrap: nowrap;
     }
+  }
 
-    li {
-      background-color: $color-default-white;
-      margin: 0;
-      padding: 55px 68px 60px 69px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      border: 7px solid transparent;
-      margin-bottom: 40px;
+  li {
+    background-color: $color-default-white;
+    margin: 0;
+    padding: 55px 68px 60px 69px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border: 7px solid transparent;
+    margin-bottom: 40px;
 
-      @include vp-1199 {
-        padding: 56px 111px 59px;
-        margin-bottom: 42px;
-      }
+    @include vp-1199 {
+      padding: 56px 111px 59px;
+      margin-bottom: 42px;
+    }
 
-      @include vp-767 {
-        padding: 45px 35px;
-        margin-bottom: 36px;
-      }
+    @include vp-767 {
+      padding: 45px 35px;
+      margin-bottom: 36px;
+    }
 
-      &:hover {
-        border-width: 7px;
-        border-image: $crimson-to-smalt;
-        border-style: solid;
-        border-image-slice: 1;
-
-        a {
-          color: $color-default-white;
-          background: $red-to-blue;
-          outline: none;
-        }
-      }
-
-      &:focus-visible {
-        border-width: 7px;
-        border-image: $crimson-to-smalt;
-        border-style: solid;
-        border-image-slice: 1;
-
-        a {
-          color: $color-default-white;
-          background: $red-to-blue;
-          outline: none;
-        }
-      }
-
-      @include hover-focus {
-        @include vp-1199 {
-          border-width: 7px;
-          border-image: $crimson-to-smalt;
-          border-style: solid;
-          border-image-slice: 1;
-
-          a {
-            color: $color-default-white;
-            background: $red-to-blue;
-            outline: none;
-          }
-        }
-      }
-
-      h3 {
-        margin: 0;
-        padding: 0;
-        font-weight: $font-weight-bold;
-        font-size: 26px;
-        line-height: 29px;
-        margin-bottom: 10px;
-
-        @include vp-767 {
-          font-size: 22px;
-          line-height: 24px;
-          margin-bottom: 9px;
-        }
-      }
-
-      p {
-        margin: 0;
-        padding: 0;
-        margin-bottom: 65px;
-
-        @include vp-767 {
-          margin-bottom: 55px;
-        }
-      }
-
-      span {
-        position: absolute;
-        top: 47%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        font-weight: $font-weight-bold;
-        font-size: 100px;
-        line-height: 150px;
-        color: rgba(232, 232, 232, 0.48);
-
-        @include vp-767 {
-          font-size: 80px;
-          line-height: 120px;
-        }
-      }
+    &:hover {
+      border-width: 7px;
+      border-image: $crimson-to-smalt;
+      border-style: solid;
+      border-image-slice: 1;
 
       a {
-        font-family: $font-family-secondary;
-        font-weight: $font-weight-bold;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.6px;
-        color: $color-sapphire-blue;
-        text-transform: uppercase;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 26px 47px 25px 47px;
-        outline: 2px solid $color-sapphire-blue;
-        outline-offset: -2px;
-
-        .no-action {
-          opacity: 0.3;
-          cursor: default;
-        }
-
-        @include vp-1199 {
-          padding: 27px 45px 25px;
-        }
-
-        @include vp-767 {
-          width: 100%;
-        }
-
-        &:hover {
-          color: $color-default-white;
-          background: $red-to-blue;
-          outline: none;
-        }
-
-        &:active {
-          color: rgba(255, 255, 255, 0.7);
-        }
-
-        &:focus-visible {
-          color: $color-default-white;
-          background: $red-to-blue;
-          outline: none;
-        }
-
-        @include hover-focus {
-          @include vp-1199 {
-            color: $color-default-white;
-            background: $red-to-blue;
-            outline: none;
-          }
-        }
+        color: $color-default-white;
+        background: $red-to-blue;
+        outline: none;
       }
     }
 
-    li:not(:nth-child(3n)) {
-      margin-right: 40px;
+    &:focus-visible {
+      border-width: 7px;
+      border-image: $crimson-to-smalt;
+      border-style: solid;
+      border-image-slice: 1;
 
-      @include vp-1199 {
-        margin-right: 0;
+      a {
+        color: $color-default-white;
+        background: $red-to-blue;
+        outline: none;
       }
+    }
+
+    @include hover-focus {
+      @include vp-1199 {
+        border-width: 7px;
+        border-image: $crimson-to-smalt;
+        border-style: solid;
+        border-image-slice: 1;
+
+        a {
+          color: $color-default-white;
+          background: $red-to-blue;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: $font-weight-bold;
+    font-size: 26px;
+    line-height: 29px;
+    margin-bottom: 10px;
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 24px;
+      margin-bottom: 9px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 65px;
+
+    @include vp-767 {
+      margin-bottom: 55px;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: $font-weight-bold;
+    font-size: 100px;
+    line-height: 150px;
+    color: rgba(232, 232, 232, 0.48);
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+
+  a {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    color: $color-sapphire-blue;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 26px 47px 25px 47px;
+    outline: 2px solid $color-sapphire-blue;
+    outline-offset: -2px;
+
+    &.no-action {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    @include vp-1199 {
+      padding: 27px 45px 25px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    &:hover {
+      color: $color-default-white;
+      background: $red-to-blue;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:focus-visible {
+      color: $color-default-white;
+      background: $red-to-blue;
+      outline: none;
+    }
+
+    @include hover-focus {
+      @include vp-1199 {
+        color: $color-default-white;
+        background: $red-to-blue;
+        outline: none;
+      }
+    }
+  }
+
+  li:not(:nth-child(3n)) {
+    margin-right: 40px;
+
+    @include vp-1199 {
+      margin-right: 0;
     }
   }
 }

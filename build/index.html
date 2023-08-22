@@ -135,7 +135,7 @@
     <section class="passes" id="pass">
       <h2> Абонементы </h2>
       <div class="passes__tabs-wrapper tabs" data-tabs="parent">
-        <ol data-tabs="controls">
+        <ol class="passes__tabs-list" data-tabs="controls">
           <li class="focus-visible is-active" data-tabs="control" tabindex="0"> 1 месяц </li>
           <li class="passes__item focus-visible" data-tabs="control" tabindex="0"> 6 месяцев </li>
           <li class="passes__item focus-visible" data-tabs="control" tabindex="0"> 12 месяцев </li>
@@ -217,7 +217,7 @@
               <a class="focus-visible" href="passes.html"> Купить абонемент </a>
             </li>
           </ul>
-          <ul data-tabs="element">
+          <!--    <ul data-tabs="element">
             <li class="focus-visible" tabindex="0">
               <h3> С тренером </h3>
               <p> 36 занятий </p>
@@ -254,7 +254,7 @@
               </div>
               <a class="focus-visible" href="passes.html"> Купить абонемент </a>
             </li>
-          </ul>
+          </ul>-->
         </div>
       </div>
     </section>
@@ -577,7 +577,7 @@
             </picture>
           </div>
         </div>
-        <ul>
+        <ul class="promotion__optional-list">
           <li>
             <div class="promotion__item-content-wrapper">
               <h3> Месяц бесплатно </h3>
@@ -603,13 +603,13 @@
       <div class="faq__wrapper">
         <h2> Вопросы и ответы </h2>
         <div class="faq__content-wrapper tabs" data-tabs="parent">
-          <ol data-tabs="controls">
+          <ol class="faq__tabs-list" data-tabs="controls">
             <li class="focus-visible is-active is-open" tabindex="0" data-tabs="control"> Центр </li>
             <li class="focus-visible" tabindex="0" data-tabs="control"> Абонемент </li>
             <li class="focus-visible" tabindex="0" data-tabs="control"> Услуги </li>
             <li class="focus-visible" tabindex="0" data-tabs="control"> Правила </li>
           </ol>
-          <div class="faq__description-wrapper" data-accordion="parent" data-tabs="content">
+          <div class="faq__description-wrapper accordions" data-accordion="parent" data-tabs="content">
             <ul class="for-load" data-tabs="element">
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
@@ -890,13 +890,13 @@
         <div class="free-class__content-wrapper">
           <h2> Бесплатное занятие </h2>
           <div data-form-validate="data-form-validate" data-callback="base">
-            <form action="https://echo.htmlacademy.ru/" method="get">
+            <form class="free-class__form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset>
                 <legend class="visually-hidden"> Контактные данные заявителя </legend>
                 <ul>
                   <li>
                     <label class="visually-hidden" for="name"> Имя </label>
-                    <div data-validate-type="text" data-limitation="name"
+                    <div class="free-class__input-wrapper" data-validate-type="text" data-limitation="name"
                       data-message-base="Поле обязательно к заполнению"
                       data-message-extra="Проверьте корректность заполнения поля" data-required>
                       <input class="focus-visible" type="text" placeholder="Имя" name="name" id="name" required>
@@ -904,7 +904,7 @@
                   </li>
                   <li>
                     <label class="visually-hidden" for="phone"> Телефон </label>
-                    <div data-validate-type="phone" data-on-input-validate
+                    <div class="free-class__input-wrapper" data-validate-type="phone" data-on-input-validate
                       data-message-base="Поле обязательно к заполнению"
                       data-message-extra="Проверьте корректность заполнения поля"
                       data-message-success="Поле заполнено верно" data-required>

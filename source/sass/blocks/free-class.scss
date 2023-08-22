@@ -59,75 +59,75 @@
       min-width: 290px;
     }
   }
+}
 
-  form {
+.free-class__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 415px;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1199 {
+    min-width: 472px;
+  }
+
+  @include vp-767 {
+    margin: 0 auto;
+    min-width: 290px;
+    max-width: 0;
+    align-items: center;
+  }
+
+  fieldset {
     display: flex;
-    flex-direction: column;
-    max-width: 415px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
     margin: 0;
     padding: 0;
+  }
+
+  button {
+    width: 100%;
+    margin: 0;
+    padding: 19px 21px 18px;
+    background-color: transparent;
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.7px;
+    color: $color-default-white;
+    text-transform: uppercase;
+    border: none;
+    outline: 3px solid $color-default-white;
+    outline-offset: -3px;
+    cursor: pointer;
 
     @include vp-1199 {
-      min-width: 472px;
+      padding: 19px 21px 19px;
     }
 
-    @include vp-767 {
-      margin: 0 auto;
-      min-width: 290px;
-      max-width: 0;
-      align-items: center;
+    &:hover {
+      background-color: $color-default-white;
+      color: $color-sapphire-blue;
     }
 
-    fieldset {
-      display: flex;
-      width: 100%;
-      border: none;
-      background-color: transparent;
-      margin: 0;
-      padding: 0;
-    }
-
-    button {
-      width: 100%;
-      margin: 0;
-      padding: 19px 21px 18px;
-      background-color: transparent;
-      font-weight: $font-weight-bold;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.7px;
+    &:active {
+      background-image: $red-to-blue;
       color: $color-default-white;
-      text-transform: uppercase;
-      border: none;
-      outline: 3px solid $color-default-white;
-      outline-offset: -3px;
-      cursor: pointer;
+      outline: none;
+    }
 
+    &:focus-visible {
+      background-color: $color-default-white;
+      color: $color-sapphire-blue;
+    }
+
+    @include hover-focus {
       @include vp-1199 {
-        padding: 19px 21px 19px;
-      }
-
-      &:hover {
         background-color: $color-default-white;
         color: $color-sapphire-blue;
-      }
-
-      &:active {
-        background-image: $red-to-blue;
-        color: $color-default-white;
-        outline: none;
-      }
-
-      &:focus-visible {
-        background-color: $color-default-white;
-        color: $color-sapphire-blue;
-      }
-
-      @include hover-focus {
-        @include vp-1199 {
-          background-color: $color-default-white;
-          color: $color-sapphire-blue;
-        }
       }
     }
   }
@@ -153,88 +153,90 @@
       width: 290px;
       margin-bottom: 12px;
     }
+  }
 
-    li {
-      padding: 0;
-      margin: 0;
-      width: 100%;
+  li {
+    padding: 0;
+    margin: 0;
+    width: 100%;
 
-      @include vp-767 {
-        margin-bottom: 26px;
-      }
+    @include vp-767 {
+      margin-bottom: 26px;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    color: $color-default-white;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-regular;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+
+    @include vp-1199 {
+      padding-bottom: 7px;
+      padding-left: 0;
     }
 
-    input {
-      background-color: transparent;
-      color: $color-default-white;
+    &::placeholder {
       font-family: $font-family-secondary;
       font-weight: $font-weight-regular;
       font-size: 14px;
       line-height: 16px;
-      padding-top: 10px;
-      padding-bottom: 5px;
-      width: 100%;
-      border: 1px solid transparent;
-      border-bottom-color: rgba(255, 255, 255, 0.5);
+      color: $color-default-white;
 
       @include vp-1199 {
-        padding-bottom: 7px;
-        padding-left: 0;
+        padding: 0;
+        margin: 0;
       }
+    }
+
+    &:hover {
+      border-bottom-color: $color-default-white;
+    }
+
+    &:focus-visible {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding-left: 10px;
 
       &::placeholder {
-        font-family: $font-family-secondary;
-        font-weight: $font-weight-regular;
-        font-size: 14px;
-        line-height: 16px;
-        color: $color-default-white;
-
-        @include vp-1199 {
-          padding: 0;
-          margin: 0;
-        }
-      }
-
-      &:hover {
-        border-bottom-color: $color-default-white;
-      }
-
-      &:focus-visible {
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        padding-left: 10px;
-
-        &::placeholder {
-          color: $color-sapphire-blue;
-        }
-      }
-
-      &:disabled {
-        border-bottom-color: rgba(255, 255, 255, 0.3);
-
-        &::placeholder {
-          opacity: 0.4;
-        }
+        color: $color-sapphire-blue;
       }
     }
 
-    div.is-invalid {
+    &:disabled {
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+
+      &::placeholder {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.free-class__input-wrapper {
+  &.is-invalid {
+    border-bottom-color: $color-torch-red;
+    color: $color-torch-red;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-regular;
+    font-size: 14px;
+    line-height: 25px;
+
+    input {
       border-bottom-color: $color-torch-red;
-      color: $color-torch-red;
-      font-family: $font-family-secondary;
-      font-weight: $font-weight-regular;
-      font-size: 14px;
-      line-height: 25px;
-
-      input {
-        border-bottom-color: $color-torch-red;
-      }
     }
+  }
 
-    div.is-valid {
-      font-family: $font-family-secondary;
-      font-weight: $font-weight-regular;
-      font-size: 14px;
-      line-height: 25px;
-    }
+  &.is-valid {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-regular;
+    font-size: 14px;
+    line-height: 25px;
   }
 }

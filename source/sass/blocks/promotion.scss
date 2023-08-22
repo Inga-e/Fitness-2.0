@@ -11,7 +11,7 @@
   }
 
   h2 {
-    margin: 15px auto 34px;
+    margin: 15px auto 32px;
     padding: 0;
     text-align: center;
     font-family: $font-family-primery;
@@ -74,95 +74,94 @@
     align-items: center;
     width: 100%;
   }
+}
 
-  ul {
+.promotion__optional-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  li {
+    padding: 26px 28px 18px 18px;
+    border-width: 7px;
+    border-image: $crimson-to-smalt;
+    border-style: solid;
+    border-image-slice: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    min-height: 211px;
 
     @include vp-1199 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 30px;
-      width: 100%;
+      padding: 25px 28px 18px 20px;
     }
 
     @include vp-767 {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      padding-top: 37px;
+      padding-left: 28px;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      align-items: center;
+      min-width: 290px;
+    }
+  }
+
+  a {
+    color: $color-sapphire-blue;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+
+    &:active {
+      color: $color-sapphire-blue;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.6px;
+      border-color: transparent;
     }
 
-    li {
-      padding: 26px 28px 18px 18px;
-      border-width: 7px;
-      border-image: $crimson-to-smalt;
-      border-style: solid;
-      border-image-slice: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 211px;
+    @include focus {
+      padding: 9px;
+      border: 1px solid $color-sapphire-blue;
 
+      span {
+        border-bottom: none;
+      }
+    }
+
+    @include hover-focus {
       @include vp-1199 {
-        padding: 25px 28px 18px 20px;
-      }
-
-      @include vp-767 {
-        padding-top: 37px;
-        padding-left: 28px;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-        width: 100%;
-        align-items: center;
-        min-width: 290px;
-      }
-
-      a {
-        color: $color-sapphire-blue;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.6px;
+        padding: 9px;
+        border: 1px solid $color-sapphire-blue;
 
         span {
-          border-bottom: 1px solid $color-sapphire-blue;
-        }
-
-        &:active {
-          color: $color-sapphire-blue;
-          font-size: 12px;
-          line-height: 14px;
-          letter-spacing: 0.6px;
-          border-color: transparent;
-        }
-
-        @include focus {
-          padding: 9px;
-          border: 1px solid $color-sapphire-blue;
-
-          span {
-            border-bottom: none;
-          }
-        }
-
-        @include hover-focus {
-          @include vp-1199 {
-            padding: 9px;
-            border: 1px solid $color-sapphire-blue;
-
-            span {
-              border-bottom: none;
-            }
-          }
+          border-bottom: none;
         }
       }
     }
   }
-}
 
+  span {
+    border-bottom: 1px solid $color-sapphire-blue;
+  }
+}
 
 .promotion__item-content-wrapper {
   padding-left: 10px;
@@ -264,10 +263,6 @@
       margin-left: 8px;
     }
 
-    span {
-      border-bottom: 1px solid $color-default-white;
-    }
-
     &:active {
       color: $color-default-white;
       font-size: 14px;
@@ -299,6 +294,10 @@
         }
       }
     }
+  }
+
+  span {
+    border-bottom: 1px solid $color-default-white;
   }
 }
 
