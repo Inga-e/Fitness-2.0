@@ -1,6 +1,6 @@
 .main-footer {
   background-color: $color-russian-black;
-  padding: 42px 104px 42px 103px;
+  padding: 40px 104px 42px 103px;
   color: $color-default-white;
   font-size: 14px;
 
@@ -37,11 +37,12 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
+  width: 69%;
   justify-content: space-between;
 
+
   @include vp-1199 {
-    width: 540px;
+    width: calc(67% + 85px);
     align-items: center;
   }
 
@@ -55,7 +56,7 @@
 }
 
 .main-footer__logo {
-  margin-top: 5px;
+  margin-top: 7px;
 
   @include vp-1199 {
     display: flex;

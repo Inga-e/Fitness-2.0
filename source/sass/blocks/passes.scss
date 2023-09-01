@@ -9,36 +9,41 @@
   position: relative;
 
   @include vp-1199 {
-    padding: 100px 0 61px;
+    padding: 101px 0 61px;
   }
 
   @include vp-767 {
+    min-width: 320px;
     padding: 63px 0 35px;
   }
 
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/background/pancakes-for-barbell.png");
+    background-image: url("../../img/background/pancakes-for-barbell-desktop.png");
     background-repeat: no-repeat;
-    width: 321px;
-    height: 384px;
-    background-size: 321px 384px;
-    transform: rotate(150deg);
-    right: -110px;
-    bottom: -95px;
+    width: 310px;
+    height: 500px;
+    background-position: 20px -42px;
+    background-size: 292px 488px;
+    right: 0;
+    top: 65%;
     z-index: 1;
 
     @include retina {
-      background-image: url("../../img/background/pancakes-for-barbell@2x.png");
+      background-image: url("../../img/background/pancakes-for-barbell-desktop@2x.png");
     }
 
     @include vp-1199 {
-      width: 289px;
-      height: 345px;
-      background-size: 289px 345px;
-      right: -10px;
-      bottom: -75px;
+      background-image: url("../../img/background/pancakes-for-barbell-tablet.png");
+      background-size: 350px 447px;
+      background-position: -40px -55px;
+      right: 0;
+      top: 85%;
+
+      @include retina {
+        background-image: url("../../img/background/pancakes-for-barbell-tablet@2x.png");
+      }
     }
 
     @include vp-767 {
@@ -62,7 +67,7 @@
       line-height: 50px;
       letter-spacing: 1.26px;
       width: 100%;
-      margin-bottom: 23px;
+      margin-bottom: 20px;
     }
 
     @include vp-767 {
@@ -79,11 +84,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 12%);
+
+  @include vp-1199 {
+    width: calc(100% - 29%);
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    width: calc(100% - 9%);
+  }
 }
 
 .passes__tabs-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -92,7 +107,7 @@
   margin-bottom: 40px;
 
   @include vp-1199 {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 
   @include vp-767 {
@@ -126,6 +141,7 @@
     @include vp-1199 {
       font-size: 18px;
       line-height: 27px;
+      padding-bottom: 14px;
     }
 
     @include vp-767 {
@@ -183,21 +199,15 @@
     }
   }
 
-  li:not(:last-child) {
-    margin-right: 46px;
+  li:not(:first-child) {
+    margin-left: 46px;
 
     @include vp-1199 {
-      margin-right: 54px;
+      margin-left: 54px;
     }
 
     @include vp-767 {
-      margin-right: 42px;
-    }
-  }
-
-  li:nth-child(3n) {
-    @include vp-767 {
-      margin-right: 0;
+      margin-left: 42px;
     }
   }
 
@@ -246,6 +256,7 @@
 
 .passes__content-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -253,6 +264,7 @@
 
   @include vp-1199 {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   ul {
@@ -260,7 +272,7 @@
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     list-style-type: none;
     width: 100%;
     flex-wrap: wrap;
@@ -269,29 +281,35 @@
     @include vp-1199 {
       flex-direction: column;
       flex-wrap: nowrap;
+      align-items: center;
     }
   }
 
   li {
     background-color: $color-default-white;
     margin: 0;
-    padding: 55px 68px 60px 69px;
+    padding: 55px 69px 60px 69px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     position: relative;
     border: 7px solid transparent;
     margin-bottom: 40px;
+    max-width: 380px;
 
     @include vp-1199 {
       padding: 56px 111px 59px;
       margin-bottom: 42px;
+      max-width: none;
     }
 
     @include vp-767 {
+      width: 100%;
       padding: 45px 35px;
       margin-bottom: 36px;
+      min-width: 290px;
     }
 
     &:hover {
@@ -304,6 +322,12 @@
         color: $color-default-white;
         background: $red-to-blue;
         outline: none;
+      }
+    }
+
+    &:active {
+      a {
+        color: rgba(255, 255, 255, 0.7);
       }
     }
 
@@ -388,9 +412,12 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    align-items: center;
+    justify-content: center;
     padding: 26px 47px 25px 47px;
     outline: 2px solid $color-sapphire-blue;
     outline-offset: -2px;
+    user-select: none;
 
     &.no-action {
       opacity: 0.3;
@@ -420,17 +447,9 @@
       background: $red-to-blue;
       outline: none;
     }
-
-    @include hover-focus {
-      @include vp-1199 {
-        color: $color-default-white;
-        background: $red-to-blue;
-        outline: none;
-      }
-    }
   }
 
-  li:not(:nth-child(3n)) {
+  li:not(:last-child) {
     margin-right: 40px;
 
     @include vp-1199 {

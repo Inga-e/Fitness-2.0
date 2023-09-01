@@ -1,17 +1,17 @@
 .coaches {
   position: relative;
-  padding: 10px 103px 105px 103px;
+  padding: 10px 7.5% 105px;
   max-width: 1366px;
   margin: 0 auto;
 
   @include vp-1199 {
-    max-width: 768px;
+    max-width: 1199px;
     padding: 13px 101px 100px 101px;
   }
 
   @include vp-767 {
-    max-width: 320px;
-    padding: 23px 47px 70px 47px;
+    min-width: 320px;
+    padding: 25px 47px 70px 47px;
   }
 
   h2 {
@@ -46,15 +46,11 @@
 
 .coaches__swiper {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
-  max-width: 1161px;
-
-  @include vp-1199 {
-    max-width: 566px;
-  }
 
   @include vp-767 {
-    width: 226px;
+    min-width: 226px;
   }
 }
 
@@ -66,18 +62,17 @@
 .coaches__trainers-slide {
   position: relative;
   width: 260px;
-  height: 294px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
   cursor: pointer;
 
   @include vp-1199 {
-    width: 268px;
+    width: 50%;
   }
 
   @include vp-767 {
-    width: 226px;
-    height: 274px;
+    width: 100%;
   }
 
   &:hover {
@@ -95,19 +90,16 @@
       top: 25px;
 
       @include vp-1199 {
-        top: 218px;
-      }
-
-      @include vp-767 {
-        top: 198px;
+        top: 75%;
       }
     }
 
     .coaches__description {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 167px;
+      align-items: center;
+      width: 70%;
+      height: 65%;
 
       @include vp-1199 {
         display: none;
@@ -125,12 +117,12 @@
       top: 25px;
 
       @include vp-1199 {
-        left: calc(50% - 5px);
+        padding-left: 2px;
       }
 
       @include vp-767 {
         top: 15px;
-        left: 50%;
+        padding-left: 7px;
       }
     }
 
@@ -138,15 +130,18 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      height: 167px;
-
-      @include vp-1199 {
-        height: 165px;
-      }
+      width: 70%;
+      height: 65%;
 
       @include vp-767 {
-        height: 166px;
+        width: 90%;
+        height: 70%;
+      }
+    }
+
+    li:not(:last-child) {
+      @include vp-1199 {
+        margin-bottom: 13px;
       }
     }
   }
@@ -159,26 +154,33 @@
       }
 
       h3 {
-        display: block;
-        top: 55px;
+        @include vp-1199 {
+          top: 25px;
+          padding-left: 2px;
+        }
 
         @include vp-767 {
-          top: 45px;
+          top: 15px;
+          padding-left: 7px;
         }
       }
 
       .coaches__description {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 167px;
-
-        @include vp-1199 {
-          height: 165px;
-        }
+        align-items: center;
+        width: 70%;
+        height: 65%;
 
         @include vp-767 {
-          height: 160px;
+          width: 90%;
+          height: 65%;
+        }
+      }
+
+      li:not(:last-child) {
+        @include vp-1199 {
+          margin-bottom: 13px;
         }
       }
     }
@@ -190,12 +192,15 @@
   height: 294px;
 
   @include vp-1199 {
-    width: 268px;
+    min-width: 268px;
+    width: 100%;
   }
 
   @include vp-767 {
-    width: 226px;
-    height: 274px;
+    width: 100%;
+    height: 100%;
+    min-width: 226px;
+    min-height: 274px;
   }
 
   img {
@@ -203,13 +208,14 @@
     object-fit: cover;
 
     @include vp-1199 {
-      width: 268px;
-      height: 294px;
+      width: 100%;
+      height: auto;
+      min-height: 294px;
     }
 
     @include vp-767 {
-      width: 226px;
-      height: 274px;
+      min-width: 226px;
+      min-height: 274px;
     }
   }
 }
@@ -223,11 +229,7 @@
   padding: 58px 46px 58px 55px;
 
   @include vp-1199 {
-    width: 268px;
-  }
-
-  @include vp-767 {
-    width: 226px;
+    width: 100%;
   }
 
   @include vp-767 {
@@ -240,7 +242,7 @@
     margin: 0;
     padding: 0;
     left: 50%;
-    bottom: 22px;
+    top: 74%;
     transform: translateX(-50%);
     font-size: 18px;
     font-weight: $font-weight-bold;
@@ -256,7 +258,7 @@
     text-align: center;
 
     @include vp-1199 {
-      left: calc(50% + 4px);
+      padding-left: 16px;
     }
   }
 }
@@ -264,7 +266,7 @@
 .coaches__description {
   display: none;
   position: absolute;
-  top: 75px;
+  top: 74px;
 
   @include vp-767 {
     top: 65px;
@@ -277,15 +279,15 @@
     color: $color-spindle-grey;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: auto;
-    margin-left: -6px;
+    margin-bottom: 33px;
+    margin-left: -16%;
 
     @include vp-1199 {
-      margin-left: -8px;
+      margin-left: -20%;
     }
 
     @include vp-767 {
-      margin-left: 0;
+      margin-left: -21%;
     }
   }
 
@@ -294,6 +296,7 @@
     padding: 0;
     color: $color-default-white;
     list-style-type: none;
+    overflow-y: auto;
   }
 
   li {
@@ -301,7 +304,7 @@
     line-height: 21px;
     margin: 0;
     padding: 0;
-    width: 159px;
+    width: 100%;
     padding-left: 16px;
     position: relative;
 

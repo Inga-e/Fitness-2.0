@@ -1,5 +1,5 @@
 .contacts {
-  padding: 56px 0 46px;
+  padding: 55px 0 46px;
   border-top: 1px solid $color-light-slate-grey;
 
   @include vp-1199 {
@@ -10,6 +10,7 @@
     margin: 0 auto;
     padding: 62px 0 43px;
     border-top: none;
+    width: 78%;
   }
 
   @include vp-767 {
@@ -19,15 +20,15 @@
 }
 
 .contacts__content-wrapper {
-  padding: 0 60px 0 121px;
+  padding: 0 60px 0 120px;
 
   @include vp-1199 {
-    margin-left: 30px;
+    margin: 0 auto;
     padding: 0;
   }
 
   @include vp-767 {
-    margin: 0 auto;
+    margin: 0;
     width: 290px;
   }
 
@@ -46,7 +47,7 @@
       line-height: 50px;
       letter-spacing: 1.26px;
       margin-left: 48px;
-      margin-bottom: 33px;
+      margin-bottom: 32px;
     }
 
     @include vp-767 {
@@ -60,7 +61,7 @@
 
   ul {
     margin: 0;
-    margin-left: 2px;
+    margin-left: 4px;
     padding: 0;
     width: 460px;
     columns: 2;
@@ -71,8 +72,8 @@
 
     @include vp-1199 {
       margin-left: 0;
-      width: 100%;
-      column-width: 266px;
+      width: 630px;
+      column-width: 50%;
       column-gap: 0;
     }
 
@@ -85,14 +86,14 @@
     &::before {
       position: absolute;
       content: "";
-      height: 102px;
+      height: calc(100% - 30px);
       width: 1px;
       background-color: $color-light-slate-grey;
       top: 5px;
       left: 50%;
 
       @include vp-1199 {
-        height: 129px;
+        height: calc(100% - 30px);
       }
 
       @include vp-767 {
@@ -102,12 +103,13 @@
   }
 
   li {
+    display: inline-block;
     margin: 0;
     margin-bottom: 18px;
 
     @include vp-1199 {
       padding-left: 48px;
-      padding-right: 48px;
+      padding-right: 46px;
       margin-bottom: 20px;
     }
 
@@ -123,7 +125,7 @@
     font-weight: $font-weight-bold;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
 
     @include vp-1199 {
       font-size: 20px;
@@ -135,8 +137,24 @@
   p {
     padding: 0;
     margin: 0;
+    margin-top: 3px;
     font-size: 14px;
     line-height: 21px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-family: $font-family-secondary;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-sapphire-blue;
 
     @include vp-1199 {
       font-size: 18px;

@@ -3,13 +3,18 @@
   background-color: $color-sapphire-blue;
   color: $color-default-white;
   width: 100%;
+
+  @include vp-767 {
+    min-width: 320px;
+    margin: 0 auto;
+  }
 }
 
 .free-class__content-wrapper {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 56px 103px 46px 100px;
+  padding: 54px 103px 46px 100px;
   min-width: 477px;
   margin-left: auto;
   width: 683px;
@@ -24,7 +29,9 @@
   }
 
   @include vp-767 {
-    width: 320px;
+    align-items: center;
+    min-width: 290px;
+    width: 100%;
     padding: 64px 15px 70px;
   }
 
@@ -56,8 +63,15 @@
       line-height: 38px;
       letter-spacing: 0.96px;
       text-shadow: none;
-      min-width: 290px;
+      min-width: 0;
+      margin-bottom: 28px;
     }
+  }
+}
+
+.free-class__form-wrapper {
+  @include vp-767 {
+    width: 100%;
   }
 }
 
@@ -73,10 +87,10 @@
   }
 
   @include vp-767 {
-    margin: 0 auto;
+    width: 100%;
     min-width: 290px;
-    max-width: 0;
     align-items: center;
+    max-width: 100%;
   }
 
   fieldset {
@@ -103,6 +117,7 @@
     outline: 3px solid $color-default-white;
     outline-offset: -3px;
     cursor: pointer;
+    user-select: none;
 
     @include vp-1199 {
       padding: 19px 21px 19px;
@@ -110,18 +125,17 @@
 
     &:hover {
       background-color: $color-default-white;
-      color: $color-sapphire-blue;
+      color: $color-egyptian-blue;
     }
 
     &:active {
-      background-image: $red-to-blue;
-      color: $color-default-white;
+      color: $color-sapphire-blue;
       outline: none;
     }
 
     &:focus-visible {
       background-color: $color-default-white;
-      color: $color-sapphire-blue;
+      color: $color-egyptian-blue;
     }
 
     @include hover-focus {
@@ -136,7 +150,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
@@ -144,14 +158,15 @@
 
     @include vp-1199 {
       column-gap: 60px;
-      width: 472px;
+      margin-bottom: 28px;
+      width: 100%;
     }
 
     @include vp-767 {
       display: flex;
       flex-direction: column;
-      width: 290px;
       margin-bottom: 12px;
+      column-gap: 0;
     }
   }
 
@@ -173,7 +188,7 @@
     font-size: 14px;
     line-height: 16px;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
     width: 100%;
     border: 1px solid transparent;
     border-bottom-color: rgba(255, 255, 255, 0.5);

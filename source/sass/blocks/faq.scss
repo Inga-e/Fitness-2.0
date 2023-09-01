@@ -1,5 +1,6 @@
 .faq {
-  padding: 120px 0 122px;
+  width: 100%;
+  padding: 122px 0 122px;
   margin: 0;
   background-color: $color-ghost-white;
 
@@ -8,6 +9,7 @@
   }
 
   @include vp-767 {
+    min-width: 320px;
     padding: 70px 0;
   }
 }
@@ -22,11 +24,11 @@
   padding: 0;
 
   @include vp-1199 {
-    width: 678px;
+    width: 88%;
   }
 
   @include vp-767 {
-    width: 290px;
+    min-width: 290px;
   }
 
   h2 {
@@ -80,13 +82,15 @@
   flex-direction: column;
   width: 100%;
   list-style-type: none;
+  padding-left: 2px;
 
   @include vp-1199 {
     display: grid;
-    grid-template-columns: repeat(4, 162px);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
     row-gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
+    padding-left: 0;
   }
 
   @include vp-767 {
@@ -111,6 +115,7 @@
     cursor: pointer;
 
     @include vp-1199 {
+      padding-top: 17px;
       margin-bottom: 0;
     }
 
@@ -179,7 +184,7 @@
 
     @include vp-767 {
       padding-top: 10px;
-      padding-bottom: 18px;
+      padding-bottom: 20px;
       grid-template-columns: 1fr 32px;
       column-gap: 20px;
     }
@@ -221,18 +226,13 @@
     display: flex;
     flex-wrap: wrap;
     align-self: center;
-    max-width: 800px;
-
-    @include vp-1199 {
-      max-width: 630px;
-    }
+    width: 87%;
 
     @include vp-767 {
       display: inline-block;
       padding-top: 10px;
       font-size: 18px;
-      margin-bottom: 7px;
-      max-width: 238px;
+      margin-bottom: 6px;
     }
   }
 
@@ -282,7 +282,7 @@
       transform: translateX(-50%) translateY(-50%);
 
       @include vp-767 {
-        width: 15px;
+        width: 12px;
       }
     }
 
@@ -295,7 +295,7 @@
       transform: translateX(-50%) translateY(-50%);
 
       @include vp-767 {
-        height: 15px;
+        height: 12px;
       }
     }
 
@@ -355,18 +355,14 @@
   p {
     margin: 0;
     padding: 0;
-    max-width: 660px;
+    width: 77%;
     font-weight: $font-weight-light;
     font-size: 18px;
     line-height: 140%;
 
-    @include vp-1199 {
-      max-width: 558px;
-    }
-
     @include vp-767 {
       font-size: 16px;
-      max-width: 270px;
+      width: 100%;
     }
   }
 }

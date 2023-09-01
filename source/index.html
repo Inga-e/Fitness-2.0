@@ -19,29 +19,33 @@
 
 <body>
   <header class="main-header">
-    <a class="main-header__logo logo focus-visible" href="#">
-      <span>
-        <picture>
-          <source media="(max-width: 767px)" srcset="../../img/svg/logo-mobile.svg" width="69" height="24">
-          <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="17">
-          <img src="../../img/svg/logo-desktop.svg" width="122" height="44" alt="логотип Supergym">
-        </picture>
-      </span>
-    </a>
-    <a class="main-header__phone focus-visible" href="tel:+78005555555"> 8-800-555-55-55 </a>
+    <div class="main-header__content-wrapper">
+      <a class="main-header__logo logo focus-visible" href="#">
+        <span>
+          <picture>
+            <source media="(max-width: 767px)" srcset="../../img/svg/logo-mobile.svg" width="69" height="24">
+            <source media="(max-width: 1199px)" srcset="../../img/svg/logo-tablet.svg" width="82" height="17">
+            <img src="../../img/svg/logo-desktop.svg" width="122" height="44" alt="логотип Supergym">
+          </picture>
+        </span>
+      </a>
+      <a class="main-header__phone focus-visible" href="tel:+78005555555"> 8-800-555-55-55 </a>
+    </div>
   </header>
   <main class="main">
     <h1 class="visually-hidden"> Интернет-магазин Фитнес 2.0 </h1>
     <section class="hero-block">
       <div class="hero-block__text-container">
-        <h2> Фитнес центр </h2>
+        <div class="hero-block__title-list-wrapper">
+          <h2> Фитнес центр </h2>
+          <ul>
+            <li> Тренажерный зал </li>
+            <li> Групповые занятия </li>
+            <li> Кардио-зона </li>
+          </ul>
+        </div>
         <p> омск </p>
         <a class="focus-visible hero-block__btn btn" href="#pass"> Купить абонемент </a>
-        <ul>
-          <li> Тренажерный зал </li>
-          <li> Групповые занятия </li>
-          <li> Кардио-зона </li>
-        </ul>
       </div>
       <div class="hero-block__image-wrapper">
         <picture>
@@ -61,9 +65,12 @@
       <div class="gym__text-container">
         <h2> Тренажерный зал </h2>
         <b> Просторный зал площадью 900 кв/м </b>
-        <p> Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+        <p> Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела
+          и&nbsp;здоровья.
           Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов. </p>
-        <p> В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
+        <p> В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp; <br> кардио-зона с&nbsp;40&nbsp;тренажерами.
+          Также
+          в&nbsp;фитнес центре есть
           несколько оборудованных залов для различных видов групповых занятий. </p>
       </div>
       <div class="gym__image-video-container">
@@ -111,12 +118,12 @@
                 <defs>
                   <linearGradient id="paint0_linear_82_466" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444"
                     gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#ed0233" offset />
+                    <stop stop-color="#ed0233" offset="0" />
                     <stop offset="1" stop-color="#003eb7" />
                   </linearGradient>
                   <linearGradient id="paint1_linear_82_466" x1="28.2373" y1="14" x2="90.1653" y2="21.664"
                     gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#ed0233" offset />
+                    <stop stop-color="#ed0233" offset="0" />
                     <stop offset="1" stop-color="#003eb7" />
                   </linearGradient>
                 </defs>
@@ -126,8 +133,10 @@
               </svg>
             </button>
           </div>
-          <iframe title="Ознакомительное видео по тренажерам фитнес-центра" width="364" height="228"
-            src="https://disk.yandex.ru/i/PW8eSAmRBFw46w" allowfullscreen data-iframe="play">
+          <iframe title="Ознакомительное видео по тренажерам фитнес-центра" width="560" height="315"
+            src="https://www.youtube.com/embed/9TZXsZItgdw?si=CJ6kON3u8_DmdgAW"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen data-iframe="play">
           </iframe>
         </div>
       </div>
@@ -619,8 +628,10 @@
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
-                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту. </p>
+                  <p> При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
+                  </p>
                 </div>
               </li>
               <li data-accordion="element">
@@ -631,8 +642,10 @@
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
-                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту. </p>
+                  <p> При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
+                  </p>
                 </div>
               </li>
               <li data-accordion="element">
@@ -643,20 +656,24 @@
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
-                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту. </p>
+                  <p> При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
+                  </p>
                 </div>
               </li>
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Сколько тренеров работает в клубе и какова <br> их квалификация? </b>
+                  <b>Сколько тренеров работает в&nbsp;клубе и&nbsp;какова их&nbsp;квалификация?</b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
-                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту. </p>
+                  <p> При первом посещении и&nbsp;покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
+                    договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придет вам на&nbsp;почту.
+                  </p>
                 </div>
               </li>
             </ul>
@@ -669,7 +686,8 @@
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
+                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с&nbsp;тренером отдельно.
+                    В&nbsp;зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения. </p>
                 </div>
@@ -682,33 +700,36 @@
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
+                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с&nbsp;тренером отдельно.
+                    В&nbsp;зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения. </p>
                 </div>
               </li>
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Есть ли лимит по посещениям тренажерного зала и групповых занятий? </b>
+                  <b> Есть&nbsp;ли лимит по&nbsp;посещениям тренажерного зала и&nbsp;групповых занятий? </b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
+                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с&nbsp;тренером отдельно.
+                    В&nbsp;зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения. </p>
                 </div>
               </li>
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Что такое семейный доступ и доступ для друзей? </b>
+                  <b> Что такое семейный доступ и&nbsp;доступ для друзей? </b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
+                  <p> При посещении тренажерного зала вам необходимо оплатить занятия с&nbsp;тренером отдельно.
+                    В&nbsp;зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения. </p>
                 </div>
@@ -717,15 +738,15 @@
             <ul data-tabs="element">
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Предлагает ли клуб услуги <br class="faq__products-break"> по консультированию <br
-                      class="faq__products-break"> по вопросам питания? </b>
+                  <b> Предлагает&nbsp;ли клуб услуги по&nbsp;консультированию по&nbsp;вопросам питания? </b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит
-                    ваши данные, цели и предложит программу питания. </p>
+                  <p> Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу.
+                    Специалист уточнит
+                    ваши данные, цели и&nbsp;предложит программу питания. </p>
                 </div>
               </li>
               <li data-accordion="element">
@@ -737,58 +758,62 @@
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Каждую неделю проводятся мероприятия для детей и раз в 2 неделе соревнования для всех </p>
+                  <p> Каждую неделю проводятся мероприятия для детей и&nbsp;раз в&nbsp;2&nbsp;неделе соревнования для
+                    всех </p>
                 </div>
               </li>
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Можно ли приобрести в центре спортивное питание? </b>
+                  <b> Можно&nbsp;ли приобрести в&nbsp;центре спортивное питание?</b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит
-                    ваши данные, цели и предложит программу питания. </p>
+                  <p> Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу.
+                    Специалист уточнит
+                    ваши данные, цели и&nbsp;предложит программу питания. </p>
                 </div>
               </li>
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Есть ли в центре детская комната? </b>
+                  <b> Есть&nbsp;ли в&nbsp;центре детская комната? </b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит
-                    ваши данные, цели и предложит программу питания. </p>
+                  <p> Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру, так и&nbsp;к&nbsp;нашему нутрициологу.
+                    Специалист уточнит
+                    ваши данные, цели и&nbsp;предложит программу питания. </p>
                 </div>
               </li>
             </ul>
             <ul data-tabs="element">
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Есть в фитнес-центре дресс-код? </b>
+                  <b> Есть в&nbsp;фитнес-центре дресс-код? </b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
-                    Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
-                    шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
-                    тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
+                  <p> Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и&nbsp;одежду.
+                    Верхняя и&nbsp;нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                    шорты, кроссовки). В&nbsp;целях безопасности, запрещается тренироваться босиком, в&nbsp;пляжных или
+                    домашних
+                    тапочках и&nbsp;т.&nbsp;п., исключения составляют специальные классы (например, йога, пилатес). </p>
                 </div>
               </li>
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Можно ли приводить с собой детей на тренировки? </b>
+                  <b> Можно&nbsp;ли приводить с&nbsp;собой детей на&nbsp;тренировки? </b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Да, конечно. У нас есть отдельные занятия для детей, имеется комната занятий для детей. </p>
+                  <p> Да, конечно. У&nbsp;нас есть отдельные занятия для детей, имеется комната занятий для детей. </p>
                 </div>
               </li>
               <li data-accordion="element">
@@ -799,21 +824,22 @@
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
-                    Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
-                    шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
-                    тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
+                  <p> Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и&nbsp;одежду.
+                    Верхняя и&nbsp;нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                    шорты, кроссовки). В&nbsp;целях безопасности, запрещается тренироваться босиком, в&nbsp;пляжных или
+                    домашних
+                    тапочках и&nbsp;т.&nbsp;п., исключения составляют специальные классы (например, йога, пилатес). </p>
                 </div>
               </li>
               <li data-accordion="element">
                 <div class="faq__question-button-wrapper">
-                  <b> Нужна ли медицинская справка для посещения залов и бассейна? </b>
+                  <b> Нужна&nbsp;ли медицинская справка для посещения залов и&nbsp;бассейна? </b>
                   <button class="focus-visible" type="button" data-accordion="button">
                     <span class="visually-hidden"> Показать комментарий </span>
                   </button>
                 </div>
                 <div class="faq__description" data-accordion="content">
-                  <p> Да, нужна. У нас есть медицинский кабинет, в котором можно ее получить. </p>
+                  <p> Да, нужна. У&nbsp;нас есть медицинский кабинет, в&nbsp;котором можно ее&nbsp;получить. </p>
                 </div>
               </li>
             </ul>
@@ -889,7 +915,7 @@
       <section class="free-class">
         <div class="free-class__content-wrapper">
           <h2> Бесплатное занятие </h2>
-          <div data-form-validate="data-form-validate" data-callback="base">
+          <div class="free-class__form-wrapper" data-form-validate="data-form-validate" data-callback="base">
             <form class="free-class__form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset>
                 <legend class="visually-hidden"> Контактные данные заявителя </legend>
@@ -932,11 +958,11 @@
             </li>
             <li>
               <h3> Телефон: </h3>
-              <p> 8-800-555-55-55 </p>
+              <a href="tel:+78005555555">8-800-555-55-55</a>
             </li>
             <li>
               <h3> Email: </h3>
-              <p> omsk@supergym.ru </p>
+              <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
             </li>
           </ul>
         </div>

@@ -1,38 +1,49 @@
 .super-games {
   display: flex;
-  width: 100%;
+  width: 1160px;
   justify-content: center;
   margin: 0 auto;
-  padding: 121px 103px 95px;
+  padding: 121px 0 95px;
 
   @include vp-1199 {
-    padding: 100px 45px 88px;
+    width: 100%;
+    height: 100%;
+    min-height: 292px;
+    padding: 99px 45px 88px;
   }
 
   @include vp-767 {
     flex-direction: column;
-    width: 290px;
     padding: 70px 15px 40px;
     align-items: center;
+    min-width: 290px;
   }
 }
 
 .super-games__text-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
   background-color: $color-torch-blackred;
   color: $color-default-white;
   margin: 0;
-  padding: 75px 78px 85px 67px;
-  width: 344px;
-  flex-grow: 1;
+  padding: 74px 78px 84px 75px;
+  width: 343px;
 
   @include vp-1199 {
-    width: 292px;
-    padding: 40px 45px;
+    box-sizing: border-box;
+    width: 43%;
+    min-height: 292px;
+    min-width: 292px;
+    padding: 45px 45px 45px;
   }
 
   @include vp-767 {
+    margin: 0 auto;
+    width: 100%;
     flex-direction: column;
     padding: 43px 44px 50px;
+    min-width: 290px;
   }
 
   p {
@@ -40,13 +51,19 @@
     margin: 0;
     font-size: 18px;
     line-height: 27px;
-    margin-left: 10px;
     margin-bottom: 44px;
 
     @include vp-1199 {
       font-size: 12px;
       line-height: 18px;
       margin-left: 0;
+      margin-bottom: 31px;
+    }
+
+    @include vp-1199 {
+      width: 203px;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 30px;
     }
   }
@@ -63,9 +80,9 @@
     justify-content: center;
     text-align: center;
     border: 4px solid $color-default-white;
-    padding-top: 25px;
+    padding-top: 27px;
     padding-bottom: 25px;
-    margin-left: 10px;
+    user-select: none;
 
     @include vp-1199 {
       font-size: 10px;
@@ -74,22 +91,21 @@
       padding-top: 12px;
       padding-bottom: 12px;
       border-width: 2px;
-      margin-left: 0;
     }
 
     &:hover {
       background-color: $color-default-white;
-      color: $color-sapphire-blue;
+      color: $color-egyptian-blue;
     }
 
     &:active {
       background-color: $color-default-white;
-      color: $color-torch-blackred;
+      color: $color-sapphire-blue;
     }
 
     &:focus-visible {
       background-color: $color-default-white;
-      color: $color-sapphire-blue;
+      color: $color-egyptian-blue;
     }
 
     @include hover-focus {
@@ -110,14 +126,22 @@
 .super-games__title-date-time-wrapper {
   display: grid;
   grid-template-columns: 1fr max-content;
-  column-gap: 40px;
+  column-gap: 48px;
   margin: 0;
   padding: 0;
   margin-bottom: 15px;
 
   @include vp-1199 {
+    margin-left: auto;
+    margin-right: auto;
     column-gap: 29px;
     margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    width: 70%;
+    min-width: 203px;
+    column-gap: 29px;
   }
 
   h2 {
@@ -150,7 +174,16 @@
   ul {
     padding: 0;
     margin: 0;
+    margin-top: 2px;
     list-style-type: none;
+
+    @include vp-1199 {
+      margin-top: 1px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+    }
   }
 
   li {
@@ -167,8 +200,8 @@
     margin-bottom: 7px;
 
     @include vp-1199 {
-      margin-bottom: 5px;
-      padding-top: 6px;
+      margin-bottom: 3px;
+      padding-top: 1px;
     }
 
     @include vp-767 {
@@ -202,7 +235,7 @@
     font-size: 40px;
     line-height: 45px;
     border-top: 1px solid $color-default-white;
-    padding-top: 7px;
+    padding-top: 5px;
 
     @include vp-1199 {
       font-size: 24px;
@@ -222,6 +255,10 @@
 
   @include vp-1199 {
     column-gap: 3px;
+  }
+
+  @include vp-767 {
+    column-gap: 0;
   }
 
   h4 {
@@ -268,14 +305,17 @@
   padding: 0;
   margin: 0;
   width: 660px;
-  height: auto;
+  height: 100%;
 
   @include vp-1199 {
-    width: 386px;
+    width: 57%;
+    min-width: 386px;
   }
 
   @include vp-767 {
-    width: 292px;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 290px;
   }
 
   img {
@@ -284,11 +324,12 @@
     height: 100%;
 
     @include vp-1199 {
-      width: 386px;
+      min-width: 386px;
+      width: 100%;
     }
 
     @include vp-767 {
-      width: 292px;
+      min-width: 290px;
     }
   }
 }

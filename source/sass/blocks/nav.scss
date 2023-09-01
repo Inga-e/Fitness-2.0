@@ -2,14 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  width: 440px;
+  width: max-content;
   max-width: 900px;
   margin: 0;
   padding: 0;
-  justify-content: space-between;
 
   @include vp-1199 {
-    width: 401px;
+    width: max-content;
     max-width: 422px;
   }
 
@@ -28,10 +27,10 @@
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 29px;
 
   @include vp-1199 {
-    margin-right: 10px;
+    margin-right: 19px;
   }
 
   @include vp-767 {

@@ -17,6 +17,7 @@ function openVideo() {
     if (videoViewPort) {
       videoViewPort.classList.add('is-shown');
       videoImage.classList.add('is-hidden');
+      videoViewPort.src += "&autoplay=1";
     } return;
   };
 
@@ -26,7 +27,7 @@ function openVideo() {
 function closeVideo() {
   videoViewPort.classList.remove('is-shown');
   videoImage.classList.remove('is-hidden');
-
+  videoViewPort.src -= "&autoplay=1";
   document.removeEventListener('keydown', onDocumentKeydown);
 }
 
