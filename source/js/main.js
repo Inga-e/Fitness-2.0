@@ -6,6 +6,7 @@ import {swiperFeedback} from './modules/feedback-swiper';
 import {swiperCoaches} from './modules/coaches-swiper';
 import {isChangeAccordionButtons, isResizePaddingBottom, isChangeTabButtons} from './modules/faq-buttons';
 import {openVideo} from './modules/video';
+import {isShowCoachesDescription} from './modules/coaches-description';
 
 // ---------------------------------
 
@@ -33,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     isChangeAccordionButtons();
     isChangeTabButtons();
     openVideo();
+    isShowCoachesDescription();
   });
 });
 

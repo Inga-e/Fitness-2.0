@@ -1,15 +1,16 @@
 .coaches {
   position: relative;
-  padding: 10px 7.5% 105px;
+  padding: 10px 0 105px;
   max-width: 1366px;
   margin: 0 auto;
 
   @include vp-1199 {
     max-width: 1199px;
-    padding: 13px 101px 100px 101px;
+    padding: 13px 101px 90px 101px;
   }
 
   @include vp-767 {
+    max-width: 767px;
     min-width: 320px;
     padding: 25px 47px 70px 47px;
   }
@@ -23,7 +24,9 @@
     font-size: 54px;
     line-height: 65px;
     letter-spacing: 1.62px;
-    width: 1160px;
+    min-width: 1040px;
+    width: 86%;
+    max-width: 1160px;
 
     @include vp-1199 {
       font-size: 42px;
@@ -31,6 +34,8 @@
       letter-spacing: 1.26px;
       margin-bottom: 31px;
       text-align: center;
+      max-width: 997px;
+      min-width: 566px;
       width: 566px;
     }
 
@@ -39,18 +44,30 @@
       line-height: 38px;
       letter-spacing: 0.96px;
       margin-bottom: 42px;
+      max-width: 673px;
       width: 226px;
+      min-width: 226px;
     }
   }
 }
 
 .coaches__swiper {
-  display: flex;
-  justify-content: center;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-width: 1040px;
+  width: 86%;
+  max-width: 1160px;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    min-width: 566px;
+  }
 
   @include vp-767 {
     min-width: 226px;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -61,17 +78,19 @@
 
 .coaches__trainers-slide {
   position: relative;
-  width: 260px;
+  width: 25%;
   height: 100%;
   margin: 0 auto;
   padding: 0;
   cursor: pointer;
 
   @include vp-1199 {
+    min-width: 268px;
     width: 50%;
   }
 
   @include vp-767 {
+    min-width: 226px;
     width: 100%;
   }
 
@@ -87,10 +106,14 @@
     }
 
     h3 {
-      top: 25px;
+      top: 8%;
 
       @include vp-1199 {
-        top: 75%;
+        top: 71.5%;
+      }
+
+      @include vp-767 {
+        top: 74.2%;
       }
     }
 
@@ -99,7 +122,6 @@
       flex-direction: column;
       align-items: center;
       width: 70%;
-      height: 65%;
 
       @include vp-1199 {
         display: none;
@@ -111,12 +133,21 @@
     .coaches__text {
       background-color: rgba(16, 38, 84, 0.89);
       height: 100%;
+
+      @include vp-1199 {
+        height: 95%;
+      }
+
+      @include vp-767 {
+        height: 100%;
+      }
     }
 
     h3 {
-      top: 25px;
+      top: 8%;
 
       @include vp-1199 {
+        top: 9%;
         padding-left: 2px;
       }
 
@@ -134,7 +165,7 @@
       height: 65%;
 
       @include vp-767 {
-        width: 90%;
+        width: 75%;
         height: 70%;
       }
     }
@@ -146,61 +177,69 @@
     }
   }
 
-  &:active {
-    @include vp-1199 {
-      .coaches__text {
+  &.active {
+    .coaches__text {
+      @include vp-1199 {
         display: block;
         background-color: rgba(16, 38, 84, 0.89);
+        height: 95%;
       }
 
-      h3 {
-        @include vp-1199 {
-          top: 25px;
-          padding-left: 2px;
-        }
+      @include vp-767 {
+        height: 100%;
+      }
+    }
 
-        @include vp-767 {
-          top: 15px;
-          padding-left: 7px;
-        }
+    h3 {
+      @include vp-1199 {
+        top: 9%;
+        padding-left: 2px;
       }
 
-      .coaches__description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70%;
+      @include vp-767 {
+        top: 15px;
+        padding-left: 7px;
+      }
+    }
+
+    .coaches__description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70%;
+      height: 65%;
+
+      @include vp-767 {
+        width: 75%;
         height: 65%;
-
-        @include vp-767 {
-          width: 90%;
-          height: 65%;
-        }
       }
+    }
 
-      li:not(:last-child) {
-        @include vp-1199 {
-          margin-bottom: 13px;
-        }
+    li:not(:last-child) {
+      @include vp-1199 {
+        margin-bottom: 13px;
       }
     }
   }
 }
 
 .coaches__image-container {
-  width: 260px;
-  height: 294px;
+  max-width: 260px;
+  max-height: 294px;
 
   @include vp-1199 {
+    max-width: 100%;
+    max-height: 100%;
     min-width: 268px;
+    min-height: 294px;
     width: 100%;
+    height: 95%;
   }
 
   @include vp-767 {
-    width: 100%;
-    height: 100%;
     min-width: 226px;
     min-height: 274px;
+    height: 100%;
   }
 
   img {
@@ -209,8 +248,7 @@
 
     @include vp-1199 {
       width: 100%;
-      height: auto;
-      min-height: 294px;
+      height: 100%;
     }
 
     @include vp-767 {
@@ -224,16 +262,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 260px;
+  width: 100%;
   height: 100%;
   padding: 58px 46px 58px 55px;
 
   @include vp-1199 {
-    width: 100%;
+    height: 95%;
   }
 
   @include vp-767 {
     padding: 48px 33px 48px 34px;
+    height: 100%;
   }
 
   h3 {
@@ -242,7 +281,7 @@
     margin: 0;
     padding: 0;
     left: 50%;
-    top: 74%;
+    bottom: 8%;
     transform: translateX(-50%);
     font-size: 18px;
     font-weight: $font-weight-bold;
@@ -258,6 +297,7 @@
     text-align: center;
 
     @include vp-1199 {
+      bottom: 6%;
       padding-left: 16px;
     }
   }
@@ -266,7 +306,7 @@
 .coaches__description {
   display: none;
   position: absolute;
-  top: 74px;
+  top: 25%;
 
   @include vp-767 {
     top: 65px;
@@ -287,7 +327,7 @@
     }
 
     @include vp-767 {
-      margin-left: -21%;
+      margin-left: -7%;
     }
   }
 
@@ -358,11 +398,7 @@
   }
 
   &--back {
-    left: 17px;
-
-    @include vp-1199 {
-      left: 15px;
-    }
+    left: 50%;
 
     @include vp-767 {
       left: -10px;
@@ -370,12 +406,8 @@
   }
 
   &--forward {
-    right: 17px;
+    right: 50%;
     transform: rotate(180deg);
-
-    @include vp-1199 {
-      right: 15px;
-    }
 
     @include vp-767 {
       right: -10px;

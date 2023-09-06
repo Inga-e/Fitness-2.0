@@ -4,6 +4,20 @@
   width: 1160px;
   color: $color-default-white;
   margin: 0 auto;
+  position: relative;
+
+  &::before {
+    @include vp-767 {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 114%;
+      top: -14%;
+      left: 0;
+      background: $conic-blue-to-red-mobile;
+      z-index: -1;
+    }
+  }
 
   @include vp-1199 {
     padding: 42px 45px 82px 45px;
@@ -133,7 +147,8 @@
     }
 
     @include vp-767 {
-      margin-top: 32px;
+      justify-content: flex-start;
+      margin-top: 77px;
       margin-right: 3px;
       min-width: 113px;
     }

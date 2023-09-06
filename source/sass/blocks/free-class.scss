@@ -14,15 +14,14 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 54px 103px 46px 100px;
-  min-width: 477px;
+  padding: 55px 170px 46px 20px;
   margin-left: auto;
-  width: 683px;
+  min-width: 416px;
 
   @include vp-1199 {
     justify-content: center;
     margin: 0 auto;
-    padding: 62px 0 69px;
+    padding: 62px 0 68px;
     align-items: flex-start;
     min-width: 0;
     width: 502px;
@@ -78,7 +77,8 @@
 .free-class__form {
   display: flex;
   flex-direction: column;
-  max-width: 415px;
+  width: 413px;
+  max-width: 413px;
   margin: 0;
   padding: 0;
 
@@ -165,7 +165,7 @@
     @include vp-767 {
       display: flex;
       flex-direction: column;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
       column-gap: 0;
     }
   }
@@ -194,7 +194,7 @@
     border-bottom-color: rgba(255, 255, 255, 0.5);
 
     @include vp-1199 {
-      padding-bottom: 7px;
+      padding-bottom: 6px;
       padding-left: 0;
     }
 

@@ -3,17 +3,21 @@
   display: flex;
   flex-wrap: wrap;
   width: max-content;
-  max-width: 150px;
+  min-width: 97px;
+  max-width: 100px;
   color: $color-default-white;
   margin: 0;
+  margin-left: auto;
   padding: 0;
+  margin-top: -1px;
 
   @include vp-1199 {
     align-items: center;
+    margin-top: 0;
   }
 
   @include vp-767 {
-    margin-top: 14px;
+    margin-top: 13px;
     margin-left: 5px;
   }
 }
@@ -33,6 +37,10 @@
 
 .socials__item:not(:last-child) {
   margin-right: 11px;
+}
+
+.socials__item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .socials__link {

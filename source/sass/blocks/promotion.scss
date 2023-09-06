@@ -1,5 +1,5 @@
 .promotion {
-  padding: 120px 103px;
+  padding: 120px 0;
   margin: 0 auto;
 
   @include vp-1199 {
@@ -266,7 +266,7 @@
   @include vp-767 {
     margin: 0 auto;
     width: 100%;
-    min-height: 297px;
+    min-height: 299px;
     height: 50%;
     align-items: center;
     padding-bottom: 35px;
@@ -388,6 +388,7 @@
     width: 100%;
     min-width: 290px;
     height: 50%;
+    min-height: 299px;
   }
 
   img {
@@ -401,6 +402,7 @@
 
     @include vp-767 {
       width: 100%;
+      min-height: 299px;
     }
   }
 }
