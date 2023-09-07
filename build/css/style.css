@@ -3730,19 +3730,21 @@ button,
     padding-left: 7px;
   }
 }
-.coaches__trainers-slide.active .coaches__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 70%;
-  height: 65%;
+@media (max-width: 1199px) {
+  .coaches__trainers-slide.active .coaches__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+    height: 65%;
+  }
 }
 @media (max-width: 767px) {
   .coaches__trainers-slide.active .coaches__description {
@@ -3954,7 +3956,12 @@ button,
   }
 }
 .coaches__button--back {
-  left: 50%;
+  left: 45%;
+}
+@media (max-width: 1199px) {
+  .coaches__button--back {
+    left: 50%;
+  }
 }
 @media (max-width: 767px) {
   .coaches__button--back {
@@ -3962,10 +3969,15 @@ button,
   }
 }
 .coaches__button--forward {
-  right: 50%;
+  right: 45%;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media (max-width: 1199px) {
+  .coaches__button--forward {
+    right: 50%;
+  }
 }
 @media (max-width: 767px) {
   .coaches__button--forward {
@@ -4943,12 +4955,23 @@ button,
     min-height: 242px;
   }
 }
+@media (max-width: 767px) {
+  .feedback .swiper {
+    min-width: 320px;
+    max-width: 100%;
+  }
+}
 .feedback .swiper-slide {
   width: 436px;
 }
 @media (max-width: 1199px) {
   .feedback .swiper-slide {
     max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .feedback .swiper-slide {
+    width: 100%;
   }
 }
 .feedback .swiper-button-prev,
@@ -4977,7 +5000,8 @@ button,
 }
 @media (max-width: 767px) {
   .feedback__content-wrapper {
-    width: 70%;
+    min-width: 226px;
+    width: calc(90% - 65px);
   }
 }
 .feedback__content-wrapper blockquote {
